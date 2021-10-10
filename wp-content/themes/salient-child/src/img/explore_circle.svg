@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>explore_circle</title>
+    <defs>
+        <circle id="path-1" cx="36" cy="36" r="36"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="74" height="74">
+            <rect x="-1" y="-1" width="74" height="74" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Revised-version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="explore_circle" transform="translate(1.000000, 1.000000)">
+            <use id="Oval" stroke="#8290A0" mask="url(#mask-2)" stroke-width="2" opacity="0.900140807" stroke-linejoin="bevel" stroke-dasharray="8" xlink:href="#path-1"></use>
+            <circle id="Oval" fill="#E4E85C" cx="36.5" cy="35.5" r="7.5"></circle>
+        </g>
+    </g>
+</svg>

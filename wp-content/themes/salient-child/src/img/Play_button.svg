@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Play_button</title>
+    <g id="Revised-version" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Play_button">
+            <circle id="Oval" stroke="#E4E85C" cx="65" cy="65" r="64.5"></circle>
+            <circle id="Oval" fill="#E4E85C" cx="65.5" cy="64.5" r="43.5"></circle>
+            <polygon id="Triangle" fill="#0D191C" transform="translate(66.500000, 64.500000) rotate(-270.000000) translate(-66.500000, -64.500000) " points="66.5 56 78 73 55 73"></polygon>
+        </g>
+    </g>
+</svg>

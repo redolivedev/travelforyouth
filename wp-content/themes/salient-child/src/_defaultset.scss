@@ -1,0 +1,29 @@
+$font: 'museo-sans', sans-serif;
+$yellow: #E4E85C;
+$white: #ffffff;
+$black: #0D191C;
+
+
+body {
+    font-family: $font;
+}
+.wrap {
+    max-width: 1400px;
+    margin:auto;
+}
+.rel {
+    position: relative;
+}
+.yellow {
+    color:$yellow;
+}
+.h1 {
+    color:$white;
+    font-family: $font;
+}
+.h2 {
+    font-family: $font;
+    font-weight: 500;
+    font-size: 75px;
+    line-height: 1.3;
+}

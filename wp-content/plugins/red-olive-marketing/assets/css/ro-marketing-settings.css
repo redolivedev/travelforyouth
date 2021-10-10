@@ -1,0 +1,64 @@
+.align-right{
+	float: right;
+}
+
+.nav-tab-link{
+	border: 1px solid #ccc;
+	border-bottom: none;
+	margin-left: .5em;
+	padding: 5px 10px;
+	font-size: 14px;
+	line-height: 24px;
+	background: #e4e4e4;
+	color: #555;
+}
+
+.ll-nav-tab {
+	background: #FFAB40;
+	color: white;
+}
+
+.toplevel_page_red-olive .form-table th {
+	width: 250px;
+	padding: 10px 10px 10px 0;
+}
+
+.toplevel_page_red-olive h2 {
+	font-size: 1.5em;
+	padding-top: 15px;
+}
+
+.ll-tab {
+	background: white;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+.ll-propositions {
+	background: white;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.ll-propositions .row {
+	display: grid;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+	.ll-propositions .row {
+		display: block;
+	}	
+}
+
+.ll-propositions .step {
+	font-size: 2em;
+	font-weight: bold;
+	padding: 10px;
+	line-height: 1em;
+}
+
+.ll-propositions .row img {
+	padding-right: 60px;
+}
