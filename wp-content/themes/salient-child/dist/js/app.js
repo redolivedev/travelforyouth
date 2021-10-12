@@ -13,191 +13,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/Draggable.js");
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/MotionPathPlugin.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 window.$ = $; // or all tools are exported from the "all" file (excluding bonus plugins):
 
  // don't forget to register plugins
 
-gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_all__WEBPACK_IMPORTED_MODULE_2__.Draggable, gsap_all__WEBPACK_IMPORTED_MODULE_3__.MotionPathPlugin); // gsap.utils.toArray(".panel").forEach((panel, i) => {
-//   ScrollTrigger.create({
-//     trigger: panel,
-//     toggleClass: "turnedOn",
-//     scrub: 1,
-//     start: "bottom", 
-//     pin: true, 
-//     pinSpacing: false,
-//     markers:true,
-//   });
-// });
-// gsap.defaults({
-//     markers:true,
-// });
-// gsap.timeline({
-//     scrollTrigger: {
-//       trigger: '.hero',
-//       scrub: true
-//     }
-//   })
-//   .to('.blackOpac', {
-//     opacity: 0
-//   })
-//   .to('.blackOpac', {
-//     opacity: 1
-//   });
-// ScrollTrigger.create({
-//   snap: 1 / 4 // snap whole page to the closest section!
-// });
-
-var iteration = 0; // gets iterated when we scroll all the way to the end or start and wraps around - allows us to smoothly continue the playhead scrubbing in the correct direction.
-
-var spacing = 0.1,
-    // spacing of the cards (stagger)
-snap = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.snap(spacing),
-    // we'll use this to snap the playhead on the seamlessLoop
-cards = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.cards li'),
-    seamlessLoop = buildSeamlessLoop(cards, spacing),
-    scrub = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to(seamlessLoop, {
-  // we reuse this tween to smoothly scrub the playhead on the seamlessLoop
-  totalTime: 0,
-  duration: 0.5,
-  ease: "power3",
-  paused: true
-}),
-    trigger = gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.create({
-  start: 0,
-  onUpdate: function onUpdate(self) {
-    if (self.progress === 1 && self.direction > 0 && !self.wrapping) {
-      wrapForward(self);
-    } else if (self.progress < 1e-5 && self.direction < 0 && !self.wrapping) {
-      wrapBackward(self);
-    } else {
-      scrub.vars.totalTime = snap((iteration + self.progress) * seamlessLoop.duration());
-      scrub.invalidate().restart(); // to improve performance, we just invalidate and restart the same tween. No need for overwrites or creating a new tween on each update.
-
-      self.wrapping = false;
-    }
-  },
-  end: "+=3000",
-  pin: ".gallery"
-});
-
-function wrapForward(trigger) {
-  // when the ScrollTrigger reaches the end, loop back to the beginning seamlessly
-  iteration++;
-  trigger.wrapping = true;
-  trigger.scroll(trigger.start + 1);
-}
-
-function wrapBackward(trigger) {
-  // when the ScrollTrigger reaches the start again (in reverse), loop back to the end seamlessly
-  iteration--;
-
-  if (iteration < 0) {
-    // to keep the playhead from stopping at the beginning, we jump ahead 10 iterations
-    iteration = 9;
-    seamlessLoop.totalTime(seamlessLoop.totalTime() + seamlessLoop.duration() * 10);
-    scrub.pause(); // otherwise it may update the totalTime right before the trigger updates, making the starting value different than what we just set above. 
-  }
-
-  trigger.wrapping = true;
-  trigger.scroll(trigger.end - 1);
-}
-
-function scrubTo(totalTime) {
-  // moves the scroll position to the place that corresponds to the totalTime value of the seamlessLoop, and wraps if necessary.
-  var progress = (totalTime - seamlessLoop.duration() * iteration) / seamlessLoop.duration();
-
-  if (progress > 1) {
-    wrapForward(trigger);
-  } else if (progress < 0) {
-    wrapBackward(trigger);
-  } else {
-    trigger.scroll(trigger.start + progress * (trigger.end - trigger.start));
-  }
-}
-
-document.querySelector(".next").addEventListener("click", function () {
-  return scrubTo(scrub.vars.totalTime + spacing);
-});
-document.querySelector(".prev").addEventListener("click", function () {
-  return scrubTo(scrub.vars.totalTime - spacing);
-});
-
-function buildSeamlessLoop(items, spacing) {
-  var overlap = Math.ceil(1 / spacing),
-      // number of EXTRA animations on either side of the start/end to accommodate the seamless looping
-  startTime = items.length * spacing + 0.5,
-      // the time on the rawSequence at which we'll start the seamless loop
-  loopTime = (items.length + overlap) * spacing + 1,
-      // the spot at the end where we loop back to the startTime 
-  rawSequence = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
-    paused: true
-  }),
-      // this is where all the "real" animations live
-  seamlessLoop = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
-    // this merely scrubs the playhead of the rawSequence so that it appears to seamlessly loop
-    paused: true,
-    repeat: -1,
-    // to accommodate infinite scrolling/looping
-    onRepeat: function onRepeat() {
-      // works around a super rare edge case bug that's fixed GSAP 3.6.1
-      this._time === this._dur && (this._tTime += this._dur - 0.01);
-    }
-  }),
-      l = items.length + overlap * 2,
-      time = 0,
-      i,
-      index,
-      item; // set initial state of items
-
-  gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.set(items, {
-    xPercent: 400,
-    opacity: 0,
-    scale: 0
-  }); // now loop through and create all the animations in a staggered fashion. Remember, we must create EXTRA animations at the end to accommodate the seamless looping.
-
-  for (i = 0; i < l; i++) {
-    index = i % items.length;
-    item = items[index];
-    time = i * spacing;
-    rawSequence.fromTo(item, {
-      scale: 0,
-      opacity: 0
-    }, {
-      scale: 1,
-      opacity: 1,
-      zIndex: 100,
-      duration: 0.5,
-      yoyo: true,
-      repeat: 1,
-      ease: "power1.in",
-      immediateRender: false
-    }, time).fromTo(item, {
-      xPercent: 400
-    }, {
-      xPercent: -400,
-      duration: 1,
-      ease: "none",
-      immediateRender: false
-    }, time);
-    i <= items.length && seamlessLoop.add("label" + i, time); // we don't really need these, but if you wanted to jump to key spots using labels, here ya go.
-  } // here's where we set up the scrubbing of the playhead to make it appear seamless. 
-
-
-  rawSequence.time(startTime);
-  seamlessLoop.to(rawSequence, {
-    time: loopTime,
-    duration: loopTime - startTime,
-    ease: "none"
-  }).fromTo(rawSequence, {
-    time: overlap * spacing + 1
-  }, {
-    time: startTime,
-    duration: startTime - (overlap * spacing + 1),
-    immediateRender: false,
-    ease: "none"
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_all__WEBPACK_IMPORTED_MODULE_2__.Draggable, gsap_all__WEBPACK_IMPORTED_MODULE_3__.MotionPathPlugin);
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray(".panel").forEach(function (panel, i) {
+  gsap_all__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.create({
+    trigger: panel,
+    toggleClass: "turnedOn",
+    scrub: 1,
+    start: "top",
+    pin: true,
+    pinSpacing: false,
+    markers: false
   });
-  return seamlessLoop;
-}
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
+  scrollTrigger: {
+    trigger: '.hero',
+    scrub: true
+  }
+}).to('.blackOpac', {
+  duration: 0.5,
+  opacity: 0
+}).to('.blackOpac', {
+  duration: 0.5,
+  opacity: 1
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".title", {
+  yPercent: -100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".title",
+    // start: "top bottom", // the default values
+    // end: "bottom top",
+    scrub: true
+  }
+});
+
+var scroll_tl = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
+  scrollTrigger: {
+    trigger: '.factsContainer',
+    start: "top center",
+    // pin: true,
+    scrub: true,
+    end: "+=300" // markers: true,
+
+  }
+}),
+    facts = _toConsumableArray(document.querySelectorAll('.fact'));
+
+scroll_tl.to('.factsContainer h2', {
+  scale: 1,
+  duration: 1,
+  ease: "slow"
+});
+scroll_tl.to(facts, {
+  xPercent: -85 * (facts.length - 1),
+  scrollTrigger: {
+    trigger: ".factsContainer_sm",
+    start: "center center",
+    pin: true,
+    // horizontal: true,
+    // pinSpacing:false,
+    // markers: true,
+    scrub: 1,
+    snap: 1 / (facts.length - 1),
+    // base vertical scrolling on how wide the container is so it feels more natural.
+    // end: () => `+=${smallFactsContainer.offsetWidth}`
+    end: function end() {
+      return "+=18406";
+    }
+  }
+});
+var tooltipSpan = document.getElementById('play');
+
+window.onmousemove = function (e) {
+  var x = e.clientX,
+      y = e.clientY;
+  tooltipSpan.style.top = y - 240 + 'px';
+  tooltipSpan.style.left = x - 240 + 'px';
+};
+
+jQuery(document).ready(function ($) {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    items: 1,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  });
+});
 
 /***/ }),
 

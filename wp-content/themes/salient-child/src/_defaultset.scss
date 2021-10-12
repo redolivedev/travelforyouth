@@ -1,3 +1,96 @@
+$grid-breakpoints: (
+  extra-small: (
+    name: xs,
+    columns: 12,
+    gutter: 10px,
+    min-width: 0
+  ),
+  small: (
+    name: sm,
+    columns: 12,
+    gutter: 10px,
+    min-width: 700px
+  ),
+  medium: (
+    name: md,
+    columns: 12,
+    gutter: 15px,
+    min-width: 980px
+  ),
+  large: (
+    name: lg,
+    columns: 12,
+    gutter: 15px,
+    min-width: 1200px
+  ),
+  extra-large: (
+    name: xl,
+    columns: 12,
+    gutter: 15px,
+    min-width: 1440px
+  )
+);
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 760px;
+
+// Small tablets (portrait view)
+$screen-md-min: 980px;
+
+// Tablets and small desktops
+$screen-lg-min: 1200px;
+
+// Large tablets and desktops
+$screen-xl-min: 1400px;
+
+// Small devices
+
+@mixin sm-down{
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md-down {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg-down {
+    @media (max-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
 $font: 'museo-sans', sans-serif;
 $yellow: #E4E85C;
 $white: #ffffff;
@@ -5,6 +98,9 @@ $black: #0D191C;
 
 
 body {
+    font-family: $font;
+}
+h1,h2,h3,h4,h5,h6, p, a {
     font-family: $font;
 }
 .wrap {
@@ -27,3 +123,57 @@ body {
     font-size: 75px;
     line-height: 1.3;
 }
+
+img {
+    max-width: 100%;  
+    height: auto;
+}
+
+.btm-15 {
+    padding-bottom:15px;
+}
+
+
+
+
+
+
+
+@mixin transition($time) {
+    -webkit-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    transition: all $time ease-in-out;
+  }
+  @mixin transition-delay($time) {
+    -webkit-transition: all .3s ease $time;
+    -moz-transition: all .3s ease $time;
+    -o-transition: all .3s ease $time;
+    -ms-transition: all .3s ease $time;
+    transition: all .3s ease $time;
+  }
+  @mixin transitionlinear($time) {
+    -webkit-transition: all $time linear;
+    -moz-transition: all $time linear;
+    -o-transition: all $time linear;
+    transition: all $time linear;
+  }
+  @mixin transition-delaylinear($time) {
+    -webkit-transition: all .5s linear $time;
+    -moz-transition: all .5s linear $time;
+    -o-transition: all .5s linear $time;
+    -ms-transition: all .5s linear $time;
+    transition: all .5s linear $time;
+  }
+  @mixin delay($time) {
+    -webkit-transition-delay: $time;
+    -moz-transition-delay: $time;
+    -o-transition-delay: $time;
+    transition-delay: $time;
+  }
+  @mixin trans($rotate) {
+    -webkit-transform: translateZ(0) rotate($rotate);
+    -ms-transform: rotate($rotate); /* IE 9 */
+    -moz-transform:translateZ(0)  rotate($rotate); /* Chrome, Safari, Opera */
+    transform:translateZ(0) rotate($rotate);
+  }
