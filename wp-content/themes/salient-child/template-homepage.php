@@ -18,12 +18,35 @@ $nectar_options = get_nectar_theme_options();
             <div class="row">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="box">
-                        <h1 class="h1 title">Building a Generation of <span class="yellow">Change Makers</span></h1>
+                        <h1 class="h1 title"><?php the_field('h1'); ?><span class="yellow"> <?php the_field('h1_yellow'); ?></span></h1>
                     </div>
                 </div>
             </div>
         </div>
-     </div>   
+     </div> 
+    <div class="path1"> 
+        <svg width="548px" height="240px" viewBox="0 0 548 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>Hero Path</title>
+            <defs>
+                <circle id="path-1" cx="36" cy="36" r="36"></circle>
+                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="74" height="74">
+                    <rect x="-1" y="-1" width="74" height="74" fill="white"></rect>
+                    <use xlink:href="#path-1" fill="black"></use>
+                </mask>
+            </defs>
+            <g id="motionPath" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g>
+                    <g>
+                        <g id="dot">
+                            <use id="Oval" stroke="#8290A0" mask="url(#mask-2)" stroke-width="2" opacity="0.900140807" stroke-linejoin="bevel" stroke-dasharray="8" xlink:href="#path-1"></use>
+                            <circle id="Oval" fill="#E4E85C" cx="36.5" cy="36.5" r="7.5"></circle>
+                        </g>
+                        <path id="path1" d="M546.188091,238.479938 C511.455722,210.987288 473.68684,183.848154 433.34662,158.794874 C327.738543,93.207014 204.507583,41.9147262 72,36" id="Path-Copy-2" stroke="#8290A0" opacity="0.900208939" stroke-dasharray="8"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
 </div>
 
 <div class="over-text"> 
@@ -31,8 +54,8 @@ $nectar_options = get_nectar_theme_options();
         <div class="row">
             <div class="col-xs-12 col-md-9 col-md-offset-3 col-lg-7 col-lg-offset-5">
                 <div class="box">
-                    <p class="xl">Travel is powerful. Done right, it can sometimes be hard and uncomfortable, but it changes you. It creates empathy for all different kinds of people, cultures, and religions. It inspires gratitude, kills entitlement, and instills a deep responsibility to be a better global citizen. Traveling boosts your courage to do hard things and gives you the confidence to do big things.</p>
-                    <a href="#" class="ro-button">Let's Go! Register for a Trip</a>   
+                    <p class="xl"><?php the_field('over_text'); ?></p>
+                    <a href="<?php the_field('button_url'); ?>" class="ro-button hide-cursor"><?php the_field('button_text'); ?></a>   
                 </div>
             </div>
         </div> 
@@ -41,13 +64,13 @@ $nectar_options = get_nectar_theme_options();
 
 <div class="blackbg">
     <div class="wrap rel">
-    <img class="about-img" src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/AboutUs.jpg">
+    <img class="about-img" src="<?php the_field('about_image'); ?>">
         <div class="row about-pad">
             <div class="col-xs-12 col-md-6">
-                <h2>Come Home Different, Come Home Better</h2>
+                <h2><?php the_field('about_h2'); ?></h2>
                 <div class="indent">
-                    <p>Change through travel doesn’t magically happen because you left the country. TFY takes 	the Olympic gold in safe, intentional, life-changing travel. Every piece of each itinerary—every. teeny. tiny. detail—is carefully vetted and crafted to instill powerful change.</p>
-                    <a href="#" class="ro-button">Learn More About Us</a>
+                    <p><?php the_field('about_text'); ?></p>
+                    <a href="<?php the_field('about_button_url'); ?>" class="ro-button hide-cursor"><?php the_field('about_button_text'); ?></a>
                 </div>
             </div>
         </div>
@@ -74,7 +97,28 @@ $nectar_options = get_nectar_theme_options();
                         <p></p>
                         </div>
                     </div> -->
-                    <?php get_template_part( 'locations' ); ?>
+                    <?php while( have_rows('places') ): the_row(); ?>
+                        <div class="fact">
+                            <div class="place">
+                                <span><?php the_sub_field('sm_yellow'); ?></span>
+                                <h3><?php the_sub_field('name'); ?></h3>
+                                <div class="place-img">
+                                    <img src="<?php the_sub_field('place_image'); ?>">
+                                </div>
+                                <div class="hover-text">
+                                    <p class="yellow">DATES</p>
+                                    <p><?php the_sub_field('dates'); ?></p>
+                                    <p class="yellow">length</p>
+                                    <p><?php the_sub_field('length'); ?></p>
+                                    <p class="yellow">Social Cause</p>
+                                    <p><?php the_sub_field('social_cause'); ?></p>
+                                    <p class="yellow">Highlights</p>
+                                    <p><?php the_sub_field('highlights'); ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>   
+                    <?php // get_template_part( 'locations' ); ?>
                     
                 <div class="fact">
                     <div class="place none">
@@ -92,7 +136,30 @@ $nectar_options = get_nectar_theme_options();
     <div class="mobile-locations">
         <?php get_template_part( 'map' ); ?>
         <div class="owl-carousel" id="mobilePlaces">
-            <?php get_template_part( 'locations-mobile' ); ?>
+            <?php while( have_rows('places') ): the_row(); ?>
+                <div class="item">
+                    <div class="m-fact">
+                        <div class="place">
+                            <span><?php the_sub_field('sm_yellow'); ?></span>
+                            <h3><?php the_sub_field('name'); ?></h3>
+                            <div class="place-img">
+                                <img src="<?php the_sub_field('place_image'); ?>">
+                            </div>
+                            <div class="hover-text">
+                                <p class="yellow">DATES</p>
+                                <p><?php the_sub_field('dates'); ?></p>
+                                <p class="yellow">length</p>
+                                <p><?php the_sub_field('length'); ?></p>
+                                <p class="yellow"><?php the_sub_field('social_cause_title'); ?></p>
+                                <p><?php the_sub_field('social_cause'); ?></p>
+                                <p class="yellow">Highlights</p>
+                                <p><?php the_sub_field('highlights'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; ?>   
+            <?php // get_template_part( 'locations-mobile' ); ?>
         </div>
     </div>
 
@@ -100,7 +167,7 @@ $nectar_options = get_nectar_theme_options();
 <div class="bg-white">
     <div class="wrap rel">
         <div class="heading-surround">
-            <h2>We Turn Youth Into<br/>Lifelong Humanitarians</h2>
+            <h2><?php the_field('mission_h2'); ?></h2>
         </div>
         <div class="row">
             <div class="col-sx-12 col-md-6">
@@ -108,14 +175,12 @@ $nectar_options = get_nectar_theme_options();
             </div>
             <div class="col-sx-12 col-md-6">
                 <p class="lrg">
-                    TFY takes a very different approach to LDS humanitarian trips. 
-                    We are not building houses 	or schools, we are building youth. 
-                    Instead of a one-time service project, we bring you up close to social causes that
-                    need your attention and inspire a lifetime of involvement in humanitarian work and social impact. 
+                <?php the_field('mission_text'); ?> 
+                <a href="<?php the_field('mission_button_url'); ?>" class="ro-button hide-cursor"><?php the_field('mission_button_text'); ?></a>
                 </p>
                 <div class="ceo">
                     <div class="quote">
-                        <p>Our human family is in desperate need. With all we’ve been given, we each have an urgent responsibility to provide relief. 
+                        <p><?php the_field('ceo_quote'); ?> . 
                             <span class="author">Kimball & Erin Palmer - TFY Founders</span>
                         </p>
                     </div>    
@@ -227,6 +292,6 @@ $nectar_options = get_nectar_theme_options();
         </div>
     </div>
 </div>
-<?php echo do_shortcode('[vc_row type="full_width_background" full_screen_row_position="middle" column_margin="default" column_direction="default" column_direction_tablet="default" column_direction_phone="default" bg_image="466" bg_position="left top" background_image_loading="default" bg_repeat="no-repeat" scene_position="center" top_padding="200" bottom_padding="200" top_padding_tablet="125" bottom_padding_tablet="125" top_padding_phone="95" bottom_padding_phone="95" text_color="dark" text_align="left" row_border_radius="none" row_border_radius_applies="bg" class="final-cta" enable_gradient="true" color_overlay="rgba(13,25,28,0.01)" color_overlay_2="#0d191c" overlay_strength="0.95" gradient_direction="top_to_bottom" shape_divider_position="bottom" bg_image_animation="none" shape_type=""][vc_column column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="1/1" tablet_width_inherit="default" tablet_text_alignment="default" phone_text_alignment="default" bg_image_animation="none" border_type="simple" column_border_width="none" column_border_style="solid"][vc_row_inner column_margin="default" column_direction="default" column_direction_tablet="default" column_direction_phone="default" text_align="left" class="cta-type"][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="1/12" tablet_width_inherit="default" bg_image_animation="none" enable_animation="true" animation="fade-in-from-left" border_type="simple" column_border_width="none" column_border_style="solid" offset="vc_hidden-sm vc_hidden-xs"][/vc_column_inner][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="7/12" tablet_width_inherit="default" bg_image_animation="none" border_type="simple" column_border_width="none" column_border_style="solid"][vc_custom_heading text="Join the Travel Movement" font_container="tag:h2|text_align:left|color:%23ffffff" use_theme_fonts="yes"][/vc_column_inner][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="4/12" tablet_width_inherit="default" bg_image_animation="none" border_type="simple" column_border_width="none" column_border_style="solid" offset="vc_hidden-sm vc_hidden-xs"][/vc_column_inner][/vc_row_inner][vc_row_inner column_margin="default" column_direction="default" column_direction_tablet="default" column_direction_phone="default" text_align="left" el_id="tfy-button"][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="2/12" tablet_width_inherit="default" bg_image_animation="none" border_type="simple" column_border_width="none" column_border_style="solid" offset="vc_hidden-sm vc_hidden-xs"][/vc_column_inner][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" font_color="#ffffff" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="6/12" tablet_width_inherit="default" bg_image_animation="none" enable_animation="true" animation="fade-in-from-bottom" border_type="simple" column_border_width="none" column_border_style="solid" delay="100"][vc_column_text css=".vc_custom_1633033101810{margin-top: -10px !important;}"]We are travelers, change-makers, adventurers, passport-stampers, global learners, and followers of Christ. Come with us this summer and start changing the world![/vc_column_text][nectar_btn size="jumbo" button_style="see-through-2" color_override="#e4e85c" hover_text_color_override="#ffffff" icon_family="none" text="Registration Coming Soon!" css_animation="fadeInUp" margin_top="20"][/vc_column_inner][vc_column_inner column_padding="no-extra-padding" column_padding_tablet="inherit" column_padding_phone="inherit" column_padding_position="all" column_element_spacing="default" background_color_opacity="1" background_hover_color_opacity="1" column_shadow="none" column_border_radius="none" column_link_target="_self" gradient_direction="left_to_right" overlay_strength="0.3" width="4/12" tablet_width_inherit="default" bg_image_animation="none" border_type="simple" column_border_width="none" column_border_style="solid" offset="vc_hidden-sm vc_hidden-xs"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]'); ?>
+<?php  $short = get_field('paste_footer_global_shortcode');  echo do_shortcode($short); ?>
 <?php endwhile; endif; ?>				
 <?php get_footer(); ?>

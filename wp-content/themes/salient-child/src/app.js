@@ -50,7 +50,30 @@ gsap.timeline({
 //   });
 
 
+// gsap.set("#dot", { scale: 0.7, autoAlpha: 1 });
+// gsap.set("#dot", {transformOrigin: "50% 50%"});
 
+gsap.to("#dot", {
+  scrollTrigger: {
+    trigger: "#motionPath",
+	// start: "top",
+    // end: "bottom",
+    scrub: 1,
+    markers: false,
+    onUpdate: self => {
+      gsap.to("#tractor", {rotation: () => self.direction === 1 ? 0 : -180, overwrite: 'auto'});
+    }
+  },
+  duration: 10,
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path1",
+    align: "#path1",
+    alignOrigin: [0.5, 0.5],
+	autoRotate:true
+  }
+});
 
 
 
@@ -96,6 +119,10 @@ window.onmousemove = function (e) {
     tooltipSpan.style.top = (y -240) + 'px';
     tooltipSpan.style.left = (x -240) + 'px';
 };
+
+
+
+
 
 
 

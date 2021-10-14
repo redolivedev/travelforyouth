@@ -62,6 +62,35 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
 // 	  scrub: true
 // 	}, 
 //   });
+// gsap.set("#dot", { scale: 0.7, autoAlpha: 1 });
+// gsap.set("#dot", {transformOrigin: "50% 50%"});
+
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot", {
+  scrollTrigger: {
+    trigger: "#motionPath",
+    // start: "top",
+    // end: "bottom",
+    scrub: 1,
+    markers: false,
+    onUpdate: function onUpdate(self) {
+      gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#tractor", {
+        rotation: function rotation() {
+          return self.direction === 1 ? 0 : -180;
+        },
+        overwrite: 'auto'
+      });
+    }
+  },
+  duration: 10,
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path1",
+    align: "#path1",
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
 
 var scroll_tl = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
   scrollTrigger: {
