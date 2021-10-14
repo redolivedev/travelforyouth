@@ -52,37 +52,36 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
 }).to('.blackOpac', {
   duration: 0.5,
   opacity: 1
-});
-gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to(".title", {
-  yPercent: -100,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".title",
-    // start: "top bottom", // the default values
-    // end: "bottom top",
-    scrub: true
-  }
-});
+}); //   gsap.to(".title", {
+// 	yPercent: -100,
+// 	ease: "none",
+// 	scrollTrigger: {
+// 	  trigger: ".title",
+// 	  // start: "top bottom", // the default values
+// 	  // end: "bottom top",
+// 	  scrub: true
+// 	}, 
+//   });
 
 var scroll_tl = gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
   scrollTrigger: {
     trigger: '.factsContainer',
     start: "top center",
     // pin: true,
-    scrub: true,
-    end: "+=300" // markers: true,
+    scrub: true // end: "+=50",
+    // markers: true,
 
   }
 }),
     facts = _toConsumableArray(document.querySelectorAll('.fact'));
 
 scroll_tl.to('.factsContainer h2', {
-  scale: 1,
+  scale: 1.3,
   duration: 1,
   ease: "slow"
 });
 scroll_tl.to(facts, {
-  xPercent: -85 * (facts.length - 1),
+  xPercent: -85 * (facts.length - 1.5),
   scrollTrigger: {
     trigger: ".factsContainer_sm",
     start: "center center",
@@ -91,11 +90,11 @@ scroll_tl.to(facts, {
     // pinSpacing:false,
     // markers: true,
     scrub: 1,
-    snap: 1 / (facts.length - 1),
+    // snap: 1 / (facts.length - 1),
     // base vertical scrolling on how wide the container is so it feels more natural.
     // end: () => `+=${smallFactsContainer.offsetWidth}`
     end: function end() {
-      return "+=18406";
+      return "+=1600";
     }
   }
 });
@@ -109,7 +108,16 @@ window.onmousemove = function (e) {
 };
 
 jQuery(document).ready(function ($) {
-  $('.owl-carousel').owlCarousel({
+  $('#test').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: true,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    items: 1,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  });
+  $('#mobilePlaces').owlCarousel({
     loop: true,
     margin: 0,
     nav: true,

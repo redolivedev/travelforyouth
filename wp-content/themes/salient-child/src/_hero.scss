@@ -10,7 +10,11 @@
     padding-top:95px;
     color:$white;
     padding-top:140px;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
      @include sm-down {
+        background-position: center;
         h1.title {
             font-size: 60px;
             line-height: 1;
@@ -18,7 +22,7 @@
     }
 }
 .xl {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
     line-height: 1.2;
     @include sm {
@@ -31,11 +35,21 @@
 
 .btm {
     position: fixed;
-    bottom: 100px;
+    bottom: 200px;
     left:40px;
-    @include lg {
-        bottom:0;
+    @include sm {
+        bottom: 100px;
+        @media screen and (min-height: 700px) {
+            bottom: 160px;
+        }
     }
+    @include lg {
+        bottom: 60px;
+        @media screen and (min-height: 700px) {
+            bottom: 100px;
+        }
+    }
+   
 }
 
 .over-text {
@@ -46,8 +60,16 @@
     @media screen and (min-height: 700px) {
         top:-200px;
     }
+    .box {
+        padding-bottom:100px;
+    }
 }
-
+.neg {
+   
+    @media screen and (min-height: 700px) {
+        margin-top:-200px;
+    }
+}
 
 .blackOpac {
     background: $black;
@@ -71,6 +93,9 @@
    h2 {
        color:$white;
    }
+   &.extra-btm{
+       padding-bottom:160px;
+   }
 }
 .pad80 {
     padding:80px 0;
@@ -80,7 +105,11 @@
     font-size:20px;
     color:$white;
     border-radius: 30px;
-    padding:15px 30px;
+    padding:15px 12px;
+    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), pointer !important;
+    @include sm {
+        padding:15px 30px;
+    }
 }
 .ro-button:hover {
     background:$yellow;
@@ -88,23 +117,36 @@
 }
 
 .indent {
-    padding-left:80px;
+    @include sm {
+        padding-left:80px;
+    }
 }
 
 .play {
     background: url('/wp-content/themes/salient-child/src/img/Play_button.svg');
     position: absolute;
-    left:-70px;
-    top:-70px;
+    left:0px;
+    top:0px;
+    bottom:0;
+    margin: auto;
+    right:0;
     width:130px;
     height:130px;
     display:block;
     opacity: 1;
     @include transition(.3s);
+    @include md {
+        left:-70px;
+        top:-70px;
+        right:auto;
+        bottom:auto;
+    }
 }
 .videolightbox {
     position: relative;
     display: block;
+    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png'), default !important;
+    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png'), pointer!important;
     .hovwrap {
         overflow: hidden;
         position: relative;
@@ -133,57 +175,86 @@
 
 
 .about-img {
-    position: absolute;
-    right:0;
-    top:-60px;
+
+    top:0;
+    @include sm {
+        position: absolute;
+        right:0;
+        max-width: 410px;
+    }
+    @include lg {
+        top:-60px;
+        max-width: 100%;
+    }
+
 }
 .about-pad {
-    padding-top:80px;
-    padding-bottom:300px;
-}
-
-.h2 {
-    font-size: 75px;
-    letter-spacing: 0;
-    line-height: 95px;
-    color:$white;
-    span {
-        font-size: 15px;
-        letter-spacing: 4.25px;
-        line-height: 18px;
-        color:$yellow;
-        display: block;
-        b {
-            color:$white;
+    padding-left:40px;
+   padding-right:20px;
+   @include sm-down {
+        h2 {
+            padding-top:40px;
         }
     }
+    @include md {
+        padding-top:80px;
+        padding-bottom:100px;
+        
+    }
+    @include lg {
+        padding-top:80px;
+        padding-bottom:240px;
+        
+    }
+    
 }
+
+
 .tab-options {
-    padding:100px 0;
+    padding:60px 0 0;
     text-align: center;
+    
+    @include sm {
+        padding:100px 0 40px;
+    }
+    
+}
+.factsContainer {
+    display:none;
+    @include sm {
+        display:block;
+    }
 }
 .factsContainer_sm {
     display: flex;
     width: 400vw;
     height: 100vh;
      position: relative;
+    
 }
 
-.fact {
+.fact, .m-fact {
     display: flex;
     flex-direction: column;
-    // width:460px;
-        &:nth-child(odd) {
-            .place {
-            top:-40px;
+    @include md {
+        @media screen and (min-height: 800px) {
+            &:nth-child(odd) {
+                .place {
+                top:0px;
+                }
+            }
+            &:nth-child(even) {
+                .place {
+                top:80px;
+                }
             }
         }
-        &:nth-child(even) {
-            .place {
-            top:80px;
-            }
+    }
+    @include sm-down {
+        &.first {
+            display: none;
         }
-
+    }
 }
 
 
@@ -196,8 +267,13 @@
 .place {
     position: relative;
     cursor: pointer;
-    min-width: 460px;
-    margin:100px;
+    min-width: 320px;
+    margin:40px;
+    @include md {
+        min-width: 460px;
+        margin:100px;
+    }
+   
     * {
         @include transition(.3s);
     }
@@ -219,8 +295,11 @@
         color:$white;
         position: absolute;
         bottom:20px;
-        left:-80px;
+        left:-30px;
         z-index:2;
+        @include sm {
+            left:-80px;
+        }
     }
     span {
         color: $yellow;
@@ -228,8 +307,11 @@
         font-size: 15px;
         font-weight: bold;
         bottom:100px;
-        left:-80px;
+        left:-30px;
         z-index:2;
+        @include sm {
+            left:-80px;
+        }
     }
     .place-img {
         overflow: hidden;
@@ -239,15 +321,24 @@
         opacity: 0;
         position: absolute;
         z-index: 2;
-        top:180px;
-        left:80px;
+        top:100px;
+        left:40px;
         color:$white;
         padding-right:20px;
+        @include sm {
+            top:180px;
+            left:80px;
+        }
+
 
         p {
             font-size:16px;
             margin:0;
             padding:0;
+            @include sm-down {
+                line-height: 1.2;
+                font-size: 14px;
+            }
         }
         .yellow {
             color:$yellow;
@@ -255,40 +346,59 @@
             font-weight: 600;
             text-transform: uppercase;
             margin-top:20px;
-        }
-    }
-
-    &:hover {
-        &:after {
-            height:100%;
-        }
-        img {
-            filter: blur(3px) grayscale(100%);
-           
-        }
-        h3 {
-
-            bottom:75%;
-        }
-        span {
-
-            bottom:70%;
-        }
-        .hover-text {
-            opacity: 1;
-            top:150px;
+            margin-bottom:10px;
+            @include sm-down {
+                line-height: 1;
+                font-size: 16px;
+            }
         }
     }
     
 }
+.fact, .m-fact {
+    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), default !important;
+    &:hover {
+        cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), pointer !important;
+    
+        .place {
+            cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), pointer !important;
+    
+                &:after {
+                    height:100%;
+                }
+                img {
+                    filter: blur(3px) grayscale(100%);
+                    
+                }
+                h3 {
+
+                    bottom:85%;
+                }
+                span {
+
+                    bottom:80%;
+                }
+                .hover-text {
+                    opacity: 1;
+                    top:100px;
+                }
+            }
+    }
+}
+
+
+
 .t-group {
     color:$white;
     position: absolute;
     z-index:2;
-    font-size: 80px;
+    font-size: 60px;
     top:35%;
     left:60px;
     line-height: 1;
+    @include sm {
+        font-size: 80px;
+    }
 }
 
 .bg-map {
@@ -302,30 +412,43 @@
     padding:80px 0;
     
     h2 {
-        font-size: 75px;
+        font-size: 40px;
         letter-spacing: 0;
-        line-height: 90px;
+        line-height: 1;
         display: block;
         margin: 20px auto;
         max-width: 830px;
+        @include lg {
+            font-size: 70px;
+            line-height: 90px;
+        }
     }
     .lrg{
         font-size: 22px;
         letter-spacing: 0.43px;
         line-height: 36px;
         font-weight: 300;
+        padding:40px;
+        @include lg {
+            padding:0;
+        }
     }
     .up {
-        position: relative;
-        top:80px;
+        @include lg {
+            position: relative;
+            top:80px;
+        }
     }
 }
 
 .ceo {
     background:#eee;
     position: relative;
-    margin-top:300px;
-    left:-25px;
+    
+    @include lg {
+        margin-top:300px;
+        left:-25px;
+    }
     &:before {
         content: '';
         position: absolute;
@@ -367,33 +490,54 @@
     }
 }
 
+
+
 .testimonial {
-    padding:200px 0;
+    
+    @include lg {
+        padding:60px 0 200px;
+        .f-width {
+            min-width:500px;
+            position: relative;
+        }
+        .owl-carousel .owl-stage-outer {
+            overflow: unset;
+        }
+    }
     
     h2 {
         text-align: center;
         position: relative;
-        top:300px;
+        @include lg {
+            top:300px;
+        }
     }
     p {
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 0.47px;
-        line-height: 36px;
+        line-height: 1.5;
         .author {
             line-height: 100px;
             display:block;
             margin-top:30px;
         }
+        @include lg {
+            font-size: 24px;
+            line-height: 36px;
+        }
     }
     .textimonial {
         padding-left:80px;
         padding-right:40px;
-        margin-top:400px;
+        margin-top:60px;
         position: relative;
+        @include lg {
+            position: absolute;
+        }
         &:before {
             content: '';
             position: absolute;
-            left:0px;
+            left:6px;
             top:8px;
             height: 45px;
             width:54px;
@@ -401,9 +545,15 @@
             background-position: center;
             background-image:url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Quotes.png');
         }
+        @include lg {
+            margin-top:300px;
+
+        }
     }
-    .down {
-        padding-top:120px;
+    @include lg {
+        .down {
+            padding-top:120px;
+        }
     }
 
 }
@@ -417,11 +567,13 @@
 }
 
 .owl-nav {
-    float: right;
-    padding-right:30%;
-    margin-top:-60px;
+    float:right;
+    padding-right:20%;
+    @include lg {
+        
+    }
 }
-.owl-prev i{
+.owl-prev i {
     display:inline-block;
     height:60px;
     width:60px;
@@ -430,6 +582,8 @@
     line-height:55px;
     font-size: 30px;
     margin-right:30px;
+    background:$white;
+    @include transition(.3s);
     &:hover {
         background:$yellow;
     }
@@ -442,10 +596,26 @@
     border:2px solid $black;
     line-height:55px;
     font-size: 30px;
+    background:$white;
+    @include transition(.3s);
     &:hover {
         background:$yellow;
     }
 }
+.mobile-locations {
+    display:block;
+
+    .owl-next i, 
+    .owl-prev i {
+        background:$black;
+        color:$white;
+        border:2px solid $white;
+    }
+    @include sm {
+        display:none;
+    }
+}
+
 
 .instagram-area {
     background:#eee;
@@ -454,13 +624,32 @@
         color:$black;
         text-align:center;
         position: relative;
-        top:-110px;
+        font-size: 45px;
+        letter-spacing: 0;
+        line-height: 1.1;
+        top:-40px;
         span {
             padding-bottom:40px;
         }
         span b {
             color:$black;
         }
+        @include lg {
+            font-size: 75px;
+            letter-spacing: 0;
+            line-height: 95px;
+            top:-110px;
+        }
     }
 }
-
+@include sm-down {
+    .vc_column-inner {
+        padding-left:20px;
+    }
+    .heading-surround {
+        padding-left:40px;
+    }
+    .scrolled-down {
+        background:$black !important;
+    }
+}

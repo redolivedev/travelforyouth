@@ -38,16 +38,16 @@ gsap.timeline({
     opacity: 1
   });
 
-  gsap.to(".title", {
-	yPercent: -100,
-	ease: "none",
-	scrollTrigger: {
-	  trigger: ".title",
-	  // start: "top bottom", // the default values
-	  // end: "bottom top",
-	  scrub: true
-	}, 
-  });
+//   gsap.to(".title", {
+// 	yPercent: -100,
+// 	ease: "none",
+// 	scrollTrigger: {
+// 	  trigger: ".title",
+// 	  // start: "top bottom", // the default values
+// 	  // end: "bottom top",
+// 	  scrub: true
+// 	}, 
+//   });
 
 
 
@@ -61,18 +61,18 @@ gsap.timeline({
 		start: "top center",
 		// pin: true,
 		scrub: true,
-		end: "+=300",
+		// end: "+=50",
 		// markers: true,
 	}
 }),
 	facts = [...document.querySelectorAll('.fact')]
 scroll_tl.to('.factsContainer h2', {
-	scale: 1,
+	scale: 1.3,
 	duration: 1,
 	ease: "slow"
 })
 scroll_tl.to(facts, {
-	xPercent: -85 * (facts.length - 1),
+	xPercent: -85 * (facts.length - 1.5),
 	scrollTrigger: {
 		trigger: ".factsContainer_sm",
 		start: "center center",
@@ -81,10 +81,10 @@ scroll_tl.to(facts, {
 		// pinSpacing:false,
 		// markers: true,
 		scrub: 1,
-		snap: 1 / (facts.length - 1),
+		// snap: 1 / (facts.length - 1),
 		// base vertical scrolling on how wide the container is so it feels more natural.
 		// end: () => `+=${smallFactsContainer.offsetWidth}`
-		end: () => `+=18406`
+		end: () => `+=1600`
 	}
 });
 
@@ -102,12 +102,24 @@ window.onmousemove = function (e) {
 
 
 jQuery(document).ready(function($) {
-	$('.owl-carousel').owlCarousel({
+	$('#test').owlCarousel({
+		loop:true,
+		margin:0,
+		nav:true,
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		items:1,
+		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+	});
+
+	$('#mobilePlaces').owlCarousel({
 		loop:true,
 		margin:0,
 		nav:true,
 		items:1,
 		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
-	})
+	});
+
+	
 }); 
 
