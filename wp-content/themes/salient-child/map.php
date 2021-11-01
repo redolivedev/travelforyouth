@@ -108,6 +108,14 @@
 </svg>
                     </div>
                     <h2 class="h2">
-                        <span><b>HUMANITARIAN</b> YOUTH TRAVEL</span> Summer 2022<br/>Destinations
+                        <span><b>HUMANITARIAN</b> YOUTH TRAVEL</span> Summer 2022 Trips
                     </h2>
+                    <div class="trips-panel">
+                        <div class="twoW active">
+                            <span>Two Week Trips</span>
+                        </div>
+                        <div class="oneW">
+                            <span>One Week Trips</span>
+                        </div>
+                    </div>
                 </div>

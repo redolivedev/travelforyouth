@@ -1,6 +1,29 @@
 .path1 {
- position: absolute;
- right:0;
- top:20%;   
- display: none;
+    position: absolute;
+    right:0;
+    top:25%;
+    display:block;
+}
+
+#dot {
+    position: relative;
+    &:after {
+        content: 'EXPLORE'; 
+        position:absolute;
+        display:block;
+    }
+}
+
+.path2 {
+    position: absolute;
+    left: 50px;
+    right: 0;
+    top: -80px;
+}
+
+.path {
+    display:none; 
+    @include xl {
+        display: block;
+    }
 }

@@ -135,7 +135,6 @@
     opacity: 1;
     @include transition(.3s);
     @include md {
-        left:-70px;
         top:-70px;
         right:auto;
         bottom:auto;
@@ -144,29 +143,14 @@
 .videolightbox {
     position: relative;
     display: block;
-    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png'), default !important;
-    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png'), pointer!important;
+
     .hovwrap {
         overflow: hidden;
         position: relative;
         display: block;
     }
-    #play { 
-        display: none;
-    }
-    &:hover {
-        #play {
-            background: url('/wp-content/themes/salient-child/src/img/Play_button.svg');
-            position: absolute;
-            width:130px;
-            height:130px;
-            right:0;
-            bottom:0;
-            display:block;
-        }
-        .play {
-            opacity: 0;
-        }
+    @include md {
+        padding-left:70px;
     }
 
 }
@@ -224,7 +208,7 @@
         display:block;
     }
 }
-.factsContainer_sm {
+.factsContainer_sm, .factsContainer_sm2 {
     display: flex;
     width: 400vw;
     height: 100vh;
@@ -232,7 +216,7 @@
     
 }
 
-.fact, .m-fact {
+.fact, .m-fact, .fact2 {
     display: flex;
     flex-direction: column;
     @include md {
@@ -259,18 +243,60 @@
 
 .socialContainer{
   width: 100%;
-//   height: 100vh;
   position: relative;
+}
+
+.mobile-locations {
+    position: relative;
+    height:900px;
+    @include md {
+     height:1100px;
+    }
+    
+    
+}
+
+#mobilePlaces, #mobilePlaces2 {
+    position:absolute;
+    opacity: 0;
+    z-index: -2;
+    @include transition(.5s);
+    @include xl {
+        overflow: hidden;
+        left:200px;
+    }
+    .owl-nav {
+        text-align: center;
+        @include lg {
+           text-align: left;
+           padding-left:40px;
+        }
+        @include xl {
+            padding-top:20px;
+        }
+        @include sm-down {
+            padding-top:20px;
+        }
+    }
+    &.active {
+        @include transition(.5s);
+        opacity: 1;
+        z-index: 1;
+    }
 }
 
 .place {
     position: relative;
     cursor: pointer;
-    min-width: 320px;
-    margin:40px;
-    @include md {
-        min-width: 460px;
-        margin:100px;
+    min-width: 300px;
+    max-width: 435px;
+    margin:20px 40px;
+    @include sm {
+        margin:20px 60px 40px;
+    }
+    @include xl {
+       
+        margin: 20px 100px 40px;
     }
    
     * {
@@ -296,7 +322,7 @@
         bottom:20px;
         left:-30px;
         z-index:2;
-        @include sm {
+        @include xl {
             left:-80px;
         }
     }
@@ -308,7 +334,7 @@
         bottom:100px;
         left:-30px;
         z-index:2;
-        @include sm {
+        @include xl {
             left:-80px;
         }
     }
@@ -324,9 +350,14 @@
         left:40px;
         color:$white;
         padding-right:20px;
-        @include sm {
+        padding-top:10px;
+        
+        @include xl {
             top:180px;
             left:80px;
+        }
+        @include sm-down {
+            max-width: 330px;
         }
 
 
@@ -334,8 +365,8 @@
             font-size:16px;
             margin:0;
             padding:0;
-            @include sm-down {
-                line-height: 1.2;
+            line-height: 1.5;
+            @include xl-down {
                 font-size: 14px;
             }
         }
@@ -344,12 +375,31 @@
             letter-spacing: 2px;
             font-weight: 600;
             text-transform: uppercase;
-            margin-top:20px;
+            margin-top:10px;
             margin-bottom:10px;
-            @include sm-down {
-                line-height: 1;
+            line-height: 1.2;
+            @include xl-down {
+                
                 font-size: 16px;
             }
+        }
+    }
+
+    .flag {
+        background:$yellow;
+        color:$black;
+        position:absolute;
+        font-family: $font;
+        font-size:18px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        line-height: 1;
+        top:40px;
+        right:60px;
+        padding:10px 20px;
+        z-index:999;
+        @include sm {
+            right:-40px;
         }
     }
     
@@ -402,6 +452,7 @@
 
 .bg-map {
     position:absolute;
+    top:-100px;
     z-index: -1;
 }
 
@@ -428,9 +479,6 @@
         line-height: 36px;
         font-weight: 300;
         padding:40px;
-        @include lg {
-            padding:0;
-        }
     }
     .up {
         @include lg {
@@ -440,6 +488,7 @@
     }
     .ro-button {
         color:$black;
+        font-weight: 600;
     }
 }
 
@@ -448,7 +497,7 @@
     position: relative;
     
     @include lg {
-        margin-top:300px;
+        margin-top:30px;
         left:-25px;
     }
     &:before {
@@ -497,7 +546,7 @@
 .testimonial {
     
     @include lg {
-        padding:60px 0 200px;
+        padding:0px 0 200px;
         .f-width {
             min-width:500px;
             position: relative;
@@ -545,7 +594,7 @@
             width:54px;
             background-repeat: no-repeat;
             background-position: center;
-            background-image:url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Quotes.png');
+            background-image:url('/wp-content/uploads/2021/10/Quotes.png');
         }
         @include lg {
             margin-top:300px;
@@ -568,13 +617,15 @@
     margin-right:20px;
 }
 
-.owl-nav {
-    float:right;
-    padding-right:20%;
+#test .owl-nav {
+    text-align: center;
     @include lg {
-        
+        float:right;
+        padding-right:20%;
+        text-align: left;
     }
 }
+
 .owl-prev i {
     display:inline-block;
     height:60px;
@@ -613,9 +664,6 @@
         color:$white;
         border:2px solid $white;
     }
-    @include sm {
-        display:none;
-    }
 }
 
 
@@ -644,6 +692,56 @@
         }
     }
 }
+
+
+
+.trips-panel {
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top:30px;
+    > div {
+        padding:10px 20px;
+        opacity: .4;
+        cursor: pointer;
+        &:after {
+            content: '';
+            display:block;
+            width:50px;
+            height:2px;
+            background:$yellow;
+            margin: 20px auto 0;
+            text-align: center;
+            opacity: 0;
+        }
+        &:hover {
+            color:$yellow;
+            opacity: 1;
+        }
+        &.active{
+            opacity: 1;
+            position: relative;
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @include sm-down {
     .vc_column-inner {
         padding-left:20px;

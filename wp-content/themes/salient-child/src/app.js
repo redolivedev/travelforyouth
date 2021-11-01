@@ -50,7 +50,7 @@ gsap.timeline({
 //   });
 
 
-// gsap.set("#dot", { scale: 0.7, autoAlpha: 1 });
+ gsap.set("#dot", { scale: 0.7, autoAlpha: 1 });
 // gsap.set("#dot", {transformOrigin: "50% 50%"});
 
 gsap.to("#dot", {
@@ -60,67 +60,42 @@ gsap.to("#dot", {
     // end: "bottom",
     scrub: 1,
     markers: false,
-    onUpdate: self => {
-      gsap.to("#tractor", {rotation: () => self.direction === 1 ? 0 : -180, overwrite: 'auto'});
-    }
+    // onUpdate: self => {
+    //   gsap.to("#tractor", {rotation: () => self.direction === 1 ? 0 : -180, overwrite: 'auto'});
+    // }
   },
-  duration: 10,
+  duration: 3,
   ease: "none",
   immediateRender: true,
   motionPath: {
     path: "#path1",
     align: "#path1",
+	start:1,
+	end:0,
     alignOrigin: [0.5, 0.5],
 	autoRotate:true
   }
 });
 
 
-
-
- let scroll_tl = gsap.timeline({
+gsap.to("#dot2", {
 	scrollTrigger: {
-		trigger: '.factsContainer',
-		start: "top center",
-		// pin: true,
-		scrub: true,
-		// end: "+=50",
-		// markers: true,
+	  trigger: "#motionPath2",
+	  scrub: 1,
+	  markers: false,
+	},
+	duration: 3,
+	ease: "none",
+	immediateRender: true,
+	motionPath: {
+	  path: "#path2",
+	  align: "#path2",
+	  start:1,
+	  end:0,
+	  alignOrigin: [0.5, 0.5],
+	  autoRotate:true
 	}
-}),
-	facts = [...document.querySelectorAll('.fact')]
-scroll_tl.to('.factsContainer h2', {
-	scale: 1.3,
-	duration: 1,
-	ease: "slow"
-})
-scroll_tl.to(facts, {
-	xPercent: -85 * (facts.length - 1.5),
-	scrollTrigger: {
-		trigger: ".factsContainer_sm",
-		start: "center center",
-		pin: true,
-		// horizontal: true,
-		// pinSpacing:false,
-		// markers: true,
-		scrub: 1,
-		// snap: 1 / (facts.length - 1),
-		// base vertical scrolling on how wide the container is so it feels more natural.
-		// end: () => `+=${smallFactsContainer.offsetWidth}`
-		end: () => `+=1600`
-	}
-});
-
-var tooltipSpan = document.getElementById('play');
-
-window.onmousemove = function (e) {
-    var x = e.clientX,
-        y = e.clientY;
-    tooltipSpan.style.top = (y -240) + 'px';
-    tooltipSpan.style.left = (x -240) + 'px';
-};
-
-
+  });
 
 
 
@@ -136,17 +111,95 @@ jQuery(document).ready(function($) {
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
 		items:1,
+		autoHeight:true,
 		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
 	});
-
+	//var $owl = $('#mobilePlaces');
 	$('#mobilePlaces').owlCarousel({
-		loop:true,
-		margin:0,
+		loop:false,
 		nav:true,
-		items:1,
+		autoWidth:true,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 0,
+				margin:0,
+			},
+			760:{
+				items:2,
+				stagePadding: 40,
+				margin:40,
+				
+			},
+			1200:{
+				items:2,
+				stagePadding: 80,
+				margin:0,
+				
+			},
+			1400:{
+				items:2,
+				stagePadding: 60,
+			},
+			
+		},
 		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
 	});
+	$('#mobilePlaces2').owlCarousel({
+		loop:false,
+		nav:true,
+		autoWidth:true,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 0,
+				margin:0,
+			},
+			760:{
+				items:2,
+				stagePadding: 40,
+				margin:40,
+				
+			},
+			1200:{
+				items:2,
+				stagePadding: 80,
+				margin:0,
+				
+			},
+			1400:{
+				items:2,
+				stagePadding: 60,
+			},
+			
+		},
+		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+	});
+	// $owl.on('mousewheel', '.owl-stage', function (e) {
+	// 	if (e.deltaY>0) {
+	// 		$owl.trigger('next.owl');
+	// 	} else {
+	// 		$owl.trigger('prev.owl');
+	// 	}
+	// 	e.preventDefault();
+	// });
 
+
+	$(".twoW").click(function () {
+		$('.oneW').removeClass('active');
+		$(this).addClass('active');
+        $("#mobilePlaces").addClass('active');
+		$("#mobilePlaces2").removeClass('active');
+    });
+
+    $(".oneW").click(function () {
+		$('.twoW').removeClass('active');
+		$(this).addClass('active');
+        $("#mobilePlaces2").addClass('active');
+		$("#mobilePlaces").removeClass('active');
+    });
 	
 }); 
 

@@ -64,6 +64,13 @@ $screen-xl-min: 1400px;
         @content;
     }
  }
+
+ // xLarge devices
+ @mixin xl-down {
+  @media (max-width: #{$screen-xl-min}) {
+      @content;
+  }
+} 
 @mixin sm {
     @media (min-width: #{$screen-sm-min}) {
         @content;

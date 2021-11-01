@@ -1,3 +1,43 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.travelforyouth\.org
+RewriteRule (.*) https://travelforyouth.org/$1 [R=301,NC,L]
+
+RewriteRule ^pages/travel\-for\-youth\-tfy\-trip\-leaders$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/registration\-countdown$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/travel\-for\-youth\-tfy\-faqs$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/travel\-for\-youth\-tfy\-about\-us$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/travel\-for\-youth\-tfy\-register$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/registration\-form\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/travel\-for\-youth\-tfy\-waitlist$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^blogs/news$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/thailand\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/costarica\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/zambia\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/greece\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/tahiti\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^products/morocco\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^collections/frontpage$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^collections/summer\-2020\-group\-1$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^collections/summer\-2020\-group\-2$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^pages/register\-travel\-for\-youth$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^challenge$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^cart$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^checkout/contact_information$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^checkout/payment$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^checkout/thank_you$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^checkout/processing$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^collections/all$ https://%{HTTP_HOST}/? [L,R=302]
+RewriteRule ^checkout/stock_problems$ https://%{HTTP_HOST}/? [L,R=302]
+
+
+
+# Pull images and content from dev server
+RewriteCond %{HTTP_HOST} ^local\.travelforyouth [NC,OR]
+RewriteCond %{HTTP_HOST} ^localhost:3000 [NC]
+RewriteRule ^wp\-content\/uploads\/(.*)$ https://travelforyouth.redolive.co/wp-content/uploads/$1 [NC,L]
+
+
 
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
