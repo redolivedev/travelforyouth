@@ -10,6 +10,12 @@ mix.js('src/app.js', 'js')
 //    .autoload({
 //        jquery: ['$', 'window.jQuery']
 //     });
+
+module.exports = {
+   output: {
+       hashFunction: "xxhash64"
+   }
+};
     
 mix.browserSync('https://local.travelforyouth.com');
 
