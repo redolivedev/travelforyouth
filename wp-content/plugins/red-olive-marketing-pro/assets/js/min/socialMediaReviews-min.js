@@ -1,0 +1,1 @@
+jQuery(function($){$("#toggle-old-social-media").click(function(e){e.preventDefault(),$("#old-social-media").show(),$("#toggle-container").hide()})});

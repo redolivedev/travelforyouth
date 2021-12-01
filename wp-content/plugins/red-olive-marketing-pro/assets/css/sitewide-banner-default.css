@@ -1,0 +1,83 @@
+/** GLOBAL **/
+.swb-site-wide-banner{
+	width: 100%;
+}
+.swb-site-wide-banner a{
+	padding: 7px 20px;
+	border-radius: 25px;
+	display: inline-block;
+	margin: 10px 0;
+	font-size: 80%;
+}
+.swb-fixed{
+	position: fixed;
+	z-index: 9999;
+}
+
+/** MOBILE **/
+@media only screen and (max-width: 767px){ 
+	.swb-site-wide-banner{
+		padding: 0 15px;
+		text-align: center;
+	}
+	.swb-site-wide-banner .swb-left-col{
+		display: none;
+	}
+	.swb-site-wide-banner .swb-center-col{
+		padding: 15px 0 0 0;
+	}
+	.swb-site-wide-banner .swb-right-col{
+		text-align: center;
+		padding: 10px;
+	}
+	
+}
+
+
+/** IPAD **/
+@media only screen and (min-width: 768px){ 
+	.swb-site-wide-banner{
+		display: table;
+	}
+
+	.swb-site-wide-banner .swb-left-col{
+		display: table-cell;
+		vertical-align: middle;
+		width: 25%;
+		text-align: center;
+	}
+
+	.swb-site-wide-banner .swb-center-col{
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		text-align: left;
+		padding-left: 50px;
+	}
+
+	.swb-site-wide-banner .swb-right-col{
+		display: table-cell;
+		vertical-align: middle;
+		width: 25%;
+		text-align: center;
+	}
+}
+
+/** DESKTOP **/
+/*@media screen and (min-width: 1025px) {
+    .swb-site-wide-banner{
+    	
+    }
+
+    .swb-site-wide-banner .swb-left-col{
+
+    }
+
+    .swb-site-wide-banner .swb-center-col{
+
+    }
+
+    .swb-site-wide-banner .swb-right-col{
+
+    }
+}*/

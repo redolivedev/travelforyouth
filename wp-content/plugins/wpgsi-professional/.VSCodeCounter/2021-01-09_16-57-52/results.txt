@@ -1,0 +1,196 @@
+Date : 2021-01-09 16:57:52
+Directory : c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius
+Total : 145 files,  31058 codes, 15792 comments, 7342 blanks, all 54192 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| PHP        |        129 |     30,609 |     15,733 |      7,227 |     53,569 |
+| Markdown   |          1 |        214 |          0 |         69 |        283 |
+| JavaScript |          3 |        194 |         59 |         34 |        287 |
+| JSON       |          1 |         27 |          0 |          1 |         28 |
+| CSS        |         11 |         14 |          0 |         11 |         25 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                          | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                             |        145 |     31,058 |     15,792 |      7,342 |     54,192 |
+| assets                                                                                                                        |         19 |        213 |         69 |         45 |        327 |
+| assets\css                                                                                                                    |         13 |         16 |          4 |         11 |         31 |
+| assets\css\admin                                                                                                              |         11 |         14 |          2 |         10 |         26 |
+| assets\img                                                                                                                    |          1 |          1 |          2 |          0 |          3 |
+| assets\js                                                                                                                     |          4 |        195 |         61 |         34 |        290 |
+| includes                                                                                                                      |         60 |     21,617 |     14,204 |      5,682 |     41,503 |
+| includes\customizer                                                                                                           |          3 |        163 |         67 |         36 |        266 |
+| includes\debug                                                                                                                |          3 |         75 |         29 |         16 |        120 |
+| includes\entities                                                                                                             |         16 |        692 |      1,140 |        182 |      2,014 |
+| includes\managers                                                                                                             |         10 |      1,453 |      1,532 |        424 |      3,409 |
+| includes\sdk                                                                                                                  |          9 |        603 |        305 |        138 |      1,046 |
+| includes\sdk\Exceptions                                                                                                       |          6 |         79 |         21 |         15 |        115 |
+| includes\supplements                                                                                                          |          3 |         42 |         38 |         12 |         92 |
+| languages                                                                                                                     |          1 |          1 |          2 |          0 |          3 |
+| templates                                                                                                                     |         59 |      8,442 |      1,217 |      1,415 |     11,074 |
+| templates\account                                                                                                             |          8 |      1,185 |         87 |        104 |      1,376 |
+| templates\account\partials                                                                                                    |          5 |        752 |         63 |         76 |        891 |
+| templates\debug                                                                                                               |          5 |        350 |         51 |         37 |        438 |
+| templates\forms                                                                                                               |         15 |      2,780 |        374 |        627 |      3,781 |
+| templates\forms\deactivation                                                                                                  |          4 |        419 |         71 |        105 |        595 |
+| templates\js                                                                                                                  |          4 |         89 |         40 |         22 |        151 |
+| templates\partials                                                                                                            |          2 |         82 |          5 |          5 |         92 |
+| templates\plugin-info                                                                                                         |          4 |        170 |         44 |         16 |        230 |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                                      | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\README.md                                                   | Markdown   |        214 |          0 |         69 |        283 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\account.css                                | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\add-ons.css                                | CSS        |          2 |          0 |          1 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\affiliation.css                            | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\checkout.css                               | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\common.css                                 | CSS        |          2 |          0 |          1 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\connect.css                                | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\debug.css                                  | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\dialog-boxes.css                           | CSS        |          2 |          0 |          1 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\gdpr-optin-notice.css                      | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\index.php                                  | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\admin\plugins.css                                | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\customizer.css                                   | CSS        |          1 |          0 |          1 |          2 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\css\index.php                                        | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\img\index.php                                        | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\index.php                                            | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\js\index.php                                         | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\js\nojquery.ba-postmessage.js                        | JavaScript |         80 |         40 |         20 |        140 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\js\nojquery.ba-postmessage.min.js                    | JavaScript |          1 |         11 |          0 |         12 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\assets\js\postmessage.js                                    | JavaScript |        113 |          8 |         14 |        135 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\config.php                                                  | PHP        |        257 |         77 |         58 |        392 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-freemius-abstract.php                        | PHP        |        118 |        414 |         65 |        597 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-freemius.php                                 | PHP        |     13,543 |      8,022 |      3,762 |     25,327 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-admin-notices.php                         | PHP        |        148 |        145 |         28 |        321 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-api.php                                   | PHP        |        285 |        286 |         93 |        664 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-logger.php                                | PHP        |        444 |        144 |        103 |        691 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-options.php                               | PHP        |        197 |        177 |         57 |        431 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-plugin-updater.php                        | PHP        |        867 |        461 |        234 |      1,562 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-security.php                              | PHP        |         42 |         34 |         10 |         86 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-storage.php                               | PHP        |        250 |        219 |         63 |        532 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\class-fs-user-lock.php                             | PHP        |         46 |         62 |         18 |        126 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\customizer\class-fs-customizer-support-section.php | PHP        |         56 |         32 |         14 |        102 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\customizer\class-fs-customizer-upsell-control.php  | PHP        |        106 |         33 |         22 |        161 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\customizer\index.php                               | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\debug\class-fs-debug-bar-panel.php                 | PHP        |         42 |         14 |          9 |         65 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\debug\debug-bar-start.php                          | PHP        |         32 |         13 |          7 |         52 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\debug\index.php                                    | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-affiliate-terms.php              | PHP        |         38 |         81 |          9 |        128 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-affiliate.php                    | PHP        |         28 |         46 |         10 |         84 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-billing.php                      | PHP        |         30 |         57 |          8 |         95 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-entity.php                       | PHP        |         68 |         71 |         20 |        159 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-payment.php                      | PHP        |         58 |         96 |         14 |        168 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-plugin-info.php                  | PHP        |         21 |          9 |          4 |         34 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-plugin-license.php               | PHP        |         96 |        207 |         28 |        331 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-plugin-plan.php                  | PHP        |         48 |         86 |         11 |        145 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-plugin-tag.php                   | PHP        |         22 |         33 |          5 |         60 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-plugin.php                       | PHP        |         49 |         96 |         14 |        159 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-pricing.php                      | PHP        |         54 |         86 |         17 |        157 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-scope-entity.php                 | PHP        |         11 |         15 |          3 |         29 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-site.php                         | PHP        |         90 |        129 |         17 |        236 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-subscription.php                 | PHP        |         48 |         87 |         12 |        147 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\class-fs-user.php                         | PHP        |         30 |         39 |         10 |         79 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\entities\index.php                                 | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\fs-core-functions.php                              | PHP        |        666 |        596 |        154 |      1,416 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\fs-essential-functions.php                         | PHP        |        255 |        168 |         77 |        500 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\fs-plugin-info-dialog.php                          | PHP        |      1,173 |        283 |        189 |      1,645 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\i18n.php                                           | PHP        |        542 |         47 |         17 |        606 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\index.php                                          | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\l10n.php                                           | PHP        |         12 |         33 |          4 |         49 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-admin-menu-manager.php           | PHP        |        426 |        460 |        120 |      1,006 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-admin-notice-manager.php         | PHP        |        226 |        196 |         50 |        472 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-cache-manager.php                | PHP        |        134 |        144 |         48 |        326 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-gdpr-manager.php                 | PHP        |         80 |        101 |         21 |        202 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-key-value-storage.php            | PHP        |        167 |        171 |         54 |        392 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-license-manager.php              | PHP        |         17 |         83 |          4 |        104 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-option-manager.php               | PHP        |        239 |        205 |         78 |        522 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-plan-manager.php                 | PHP        |         69 |         74 |         19 |        162 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\class-fs-plugin-manager.php               | PHP        |         94 |         96 |         30 |        220 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\managers\index.php                                 | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\ArgumentNotExistException.php       | PHP        |          8 |          0 |          1 |          9 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\EmptyArgumentException.php          | PHP        |          8 |          0 |          1 |          9 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\Exception.php                       | PHP        |         44 |         19 |         11 |         74 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\InvalidArgumentException.php        | PHP        |          7 |          0 |          1 |          8 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\OAuthException.php                  | PHP        |         11 |          0 |          1 |         12 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\Exceptions\index.php                           | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\FreemiusBase.php                               | PHP        |        113 |         80 |         23 |        216 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\FreemiusWordPress.php                          | PHP        |        410 |        202 |        100 |        712 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\sdk\index.php                                      | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\supplements\fs-essential-functions-1.1.7.1.php     | PHP        |         16 |         22 |          6 |         44 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\supplements\fs-essential-functions-2.2.1.php       | PHP        |         25 |         14 |          6 |         45 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\includes\supplements\index.php                              | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\index.php                                                   | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\languages\index.php                                         | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\package.json                                                | JSON       |         27 |          0 |          1 |         28 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\require.php                                                 | PHP        |         37 |          9 |          3 |         49 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\start.php                                                   | PHP        |        249 |        212 |         69 |        530 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account.php                                       | PHP        |        921 |         60 |        115 |      1,096 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\billing.php                               | PHP        |        390 |         12 |         21 |        423 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\index.php                                 | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\partials\activate-license-button.php      | PHP        |         37 |         12 |          5 |         54 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\partials\addon.php                        | PHP        |        386 |         19 |         41 |        446 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\partials\deactivate-license-button.php    | PHP        |         21 |         11 |          4 |         36 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\partials\index.php                        | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\partials\site.php                         | PHP        |        307 |         19 |         26 |        352 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\account\payments.php                              | PHP        |         42 |         10 |          7 |         59 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\add-ons.php                                       | PHP        |        334 |        100 |         68 |        502 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\add-trial-to-pricing.php                          | PHP        |         15 |         13 |          3 |         31 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\admin-notice.php                                  | PHP        |         56 |         11 |         10 |         77 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\ajax-loader.php                                   | PHP        |          1 |          0 |          0 |          1 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\auto-installation.php                             | PHP        |        195 |         15 |         40 |        250 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\checkout.php                                      | PHP        |        231 |         58 |         48 |        337 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\connect.php                                       | PHP        |        744 |        124 |        158 |      1,026 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\contact.php                                       | PHP        |         73 |         40 |         15 |        128 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug.php                                         | PHP        |        680 |         26 |         54 |        760 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug\api-calls.php                               | PHP        |        122 |         19 |         14 |        155 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug\index.php                                   | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug\logger.php                                  | PHP        |         53 |          9 |          4 |         66 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug\plugins-themes-sync.php                     | PHP        |         63 |          8 |          6 |         77 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\debug\scheduled-crons.php                         | PHP        |        111 |         13 |         13 |        137 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\email.php                                         | PHP        |         38 |          9 |          2 |         49 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\firewall-issues-js.php                            | PHP        |         39 |         13 |          7 |         59 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\affiliation.php                             | PHP        |        417 |         23 |         69 |        509 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\data-debug-mode.php                         | PHP        |        158 |         20 |         35 |        213 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\deactivation\contact.php                    | PHP        |         11 |          9 |          4 |         24 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\deactivation\form.php                       | PHP        |        396 |         51 |         97 |        544 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\deactivation\index.php                      | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\deactivation\retry-skip.php                 | PHP        |         11 |          9 |          4 |         24 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\index.php                                   | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\license-activation.php                      | PHP        |        606 |        118 |        144 |        868 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\optout.php                                  | PHP        |        260 |         21 |         56 |        337 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\premium-versions-upgrade-handler.php        | PHP        |        149 |         23 |         33 |        205 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\premium-versions-upgrade-metadata.php       | PHP        |         31 |          9 |          7 |         47 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\resend-key.php                              | PHP        |        185 |         16 |         47 |        248 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\subscription-cancellation.php               | PHP        |        211 |         19 |         47 |        277 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\trial-start.php                             | PHP        |        128 |         21 |         33 |        182 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\forms\user-change.php                             | PHP        |        215 |         31 |         51 |        297 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\gdpr-optin-js.php                                 | PHP        |         50 |          9 |          7 |         66 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\index.php                                         | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\js\index.php                                      | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\js\jquery.content-change.php                      | PHP        |         36 |         15 |          7 |         58 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\js\open-license-activation.php                    | PHP        |         24 |          9 |          4 |         37 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\js\style-premium-theme.php                        | PHP        |         28 |         14 |         11 |         53 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\partials\index.php                                | PHP        |          1 |          1 |          1 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\partials\network-activation.php                   | PHP        |         81 |          4 |          4 |         89 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\plugin-icon.php                                   | PHP        |          9 |          9 |          2 |         20 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\plugin-info\description.php                       | PHP        |         61 |         13 |          4 |         78 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\plugin-info\features.php                          | PHP        |         90 |         16 |          8 |        114 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\plugin-info\index.php                             | PHP        |          1 |          2 |          0 |          3 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\plugin-info\screenshots.php                       | PHP        |         18 |         13 |          4 |         35 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\powered-by.php                                    | PHP        |         31 |         24 |          6 |         61 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\pricing.php                                       | PHP        |        144 |         42 |         23 |        209 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\secure-https-header.php                           | PHP        |         25 |         12 |          2 |         39 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\sticky-admin-notice-js.php                        | PHP        |         24 |         10 |          5 |         39 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\tabs-capture-js.php                               | PHP        |         43 |         12 |          8 |         63 |
+| c:\xampp\htdocs\office\wp-content\plugins\wpgsi\includes\freemius\templates\tabs.php                                          | PHP        |        132 |         27 |         31 |        190 |
+| Total                                                                                                                         |            |     31,058 |     15,792 |      7,342 |     54,192 |
++-------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

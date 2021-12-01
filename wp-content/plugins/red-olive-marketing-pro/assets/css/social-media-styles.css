@@ -1,0 +1,38 @@
+#ro-social-container {
+	min-height: 350px;
+	margin: 0 auto;
+	max-width: 515px;
+	text-align: center;
+	padding-top: 100px;
+}
+
+#ro-social-container h1 {
+	margin: 0;
+	font-weight: bold;	
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#ro-social-container .review-text {
+	margin: 0;
+	font-weight: bold;	
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+#ro-social-container .review-link {
+	text-decoration: none;
+	color: #333333;
+}
+
+.social-review-col {	
+	display: inline-block; 	
+	padding: 15px;
+	height: 168px;
+}
+
+@media(max-width: 550px){
+	.social-review-col {
+		width: 50%;
+		float: left;				
+	}
+}

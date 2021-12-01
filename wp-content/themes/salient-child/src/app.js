@@ -75,7 +75,7 @@ gsap.to("#dot", {
     alignOrigin: [0.5, 0.5],
 	autoRotate:true
   }
-});
+}).reverse();
 
 
 gsap.to("#dot2", {
@@ -96,6 +96,23 @@ gsap.to("#dot2", {
 	  autoRotate:true
 	}
   });
+
+
+
+
+
+
+
+var tooltipSpan = document.getElementById('play');
+
+window.onmousemove = function (e) {
+    var x = e.clientX,
+        y = e.clientY;
+    tooltipSpan.style.top = (y -240) + 'px';
+    tooltipSpan.style.left = (x -240) + 'px';
+};
+
+
 
 
 

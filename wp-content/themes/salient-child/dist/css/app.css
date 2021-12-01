@@ -1446,16 +1446,28 @@ img {
 .videolightbox {
   position: relative;
   display: block;
+  cursor: url("https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png"), default !important;
+  cursor: url("https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Play_button.png"), pointer !important;
 }
 .videolightbox .hovwrap {
   overflow: hidden;
   position: relative;
   display: block;
 }
-@media (min-width: 980px) {
-  .videolightbox {
-    padding-left: 70px;
-  }
+.videolightbox #play {
+  display: none;
+}
+.videolightbox:hover #play {
+  background: url("/wp-content/themes/salient-child/src/img/Play_button.svg");
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+.videolightbox:hover .play {
+  opacity: 0;
 }
 
 .about-img {
@@ -1548,19 +1560,13 @@ img {
 
 .mobile-locations {
   position: relative;
-  height: 900px;
-}
-@media (min-width: 980px) {
-  .mobile-locations {
-    height: 1100px;
-  }
+  height: 1000px;
 }
 
 #mobilePlaces, #mobilePlaces2 {
   position: absolute;
   opacity: 0;
   z-index: -2;
-  transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1400px) {
   #mobilePlaces, #mobilePlaces2 {
@@ -1588,7 +1594,6 @@ img {
   }
 }
 #mobilePlaces.active, #mobilePlaces2.active {
-  transition: all 0.5s ease-in-out;
   opacity: 1;
   z-index: 1;
 }
@@ -1664,7 +1669,6 @@ img {
   left: 40px;
   color: #ffffff;
   padding-right: 20px;
-  padding-top: 10px;
 }
 @media (min-width: 1400px) {
   .place .hover-text {
@@ -1681,10 +1685,10 @@ img {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 @media (max-width: 1400px) {
   .place .hover-text p {
+    line-height: 1.2;
     font-size: 14px;
   }
 }
@@ -1693,12 +1697,12 @@ img {
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
-  line-height: 1.2;
 }
 @media (max-width: 1400px) {
   .place .hover-text .yellow {
+    line-height: 1;
     font-size: 16px;
   }
 }
@@ -1706,20 +1710,14 @@ img {
   background: #E4E85C;
   color: #0D191C;
   position: absolute;
-  font-family: "museo-sans", sans-serif;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 600;
   line-height: 1;
   top: 40px;
-  right: 60px;
+  right: -40px;
   padding: 10px 20px;
   z-index: 999;
-}
-@media (min-width: 760px) {
-  .place .flag {
-    right: -40px;
-  }
 }
 
 .fact, .m-fact {
@@ -1765,7 +1763,6 @@ img {
 
 .bg-map {
   position: absolute;
-  top: -100px;
   z-index: -1;
 }
 
@@ -1796,6 +1793,11 @@ img {
   padding: 40px;
 }
 @media (min-width: 1200px) {
+  .bg-white .lrg {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
   .bg-white .up {
     position: relative;
     top: 80px;
@@ -1812,7 +1814,7 @@ img {
 }
 @media (min-width: 1200px) {
   .ceo {
-    margin-top: 30px;
+    margin-top: 300px;
     left: -25px;
   }
 }

@@ -63,7 +63,7 @@ $nectar_options = get_nectar_theme_options();
     </div>
 </div>
 
-<div class="blackbg">
+<div class="blackbg special-relative">
     <div class="path2 path" id="motionPath2"> 
         <svg viewBox="0 0 1404 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <title>About Us</title>

@@ -78,7 +78,7 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot", {
     alignOrigin: [0.5, 0.5],
     autoRotate: true
   }
-});
+}).reverse();
 gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot2", {
   scrollTrigger: {
     trigger: "#motionPath2",
@@ -97,6 +97,15 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot2", {
     autoRotate: true
   }
 });
+var tooltipSpan = document.getElementById('play');
+
+window.onmousemove = function (e) {
+  var x = e.clientX,
+      y = e.clientY;
+  tooltipSpan.style.top = y - 240 + 'px';
+  tooltipSpan.style.left = x - 240 + 'px';
+};
+
 jQuery(document).ready(function ($) {
   $('#test').owlCarousel({
     loop: true,

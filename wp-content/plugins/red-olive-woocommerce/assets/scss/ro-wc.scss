@@ -1,0 +1,15 @@
+@import 'lib/_jquery-confirm.min';
+
+
+.jconfirm {
+	.container {
+	    max-width: 80%;
+	    width: 600px;
+	    margin: 0 auto;
+		display: block;
+
+		.row {
+			display: block !important;
+		}
+	}
+}

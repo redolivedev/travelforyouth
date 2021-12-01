@@ -1,0 +1,19 @@
+.ro-acf-mailchimp-container .mc-left-container {
+    width: 49%;
+    float: left;
+}
+
+.ro-acf-mailchimp-container .mc-right-container {
+    width: 49%;
+    float: right;
+}
+
+.ro-acf-mailchimp-container .button {
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.mailchimp-creds-error, .mailchimp-server-error {
+	display:none;
+	color: orange;
+}
