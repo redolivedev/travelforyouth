@@ -84,24 +84,17 @@
     z-index: 999;
 }
 
-.special-relative {
-    position: relative;
-    z-index: 99;
-  }
-
 .blackbg {
+   background: $black;
    display: block;
+   position:relative;
+   z-index:99;
    color:$white;
    h2 {
        color:$white;
    }
    &.extra-btm{
-        padding-bottom: 220px;
-        position: relative;
-        z-index: 1;
-        @include md {
-            padding-bottom: 100px;
-        }
+       padding-bottom:160px;
    }
 }
 .pad80 {
@@ -125,10 +118,6 @@
 .indent {
     @include sm {
         padding-left:80px;
-        padding-top: 30px;
-        p {
-            padding-bottom: 60px;
-        }
     }
 }
 
@@ -288,9 +277,6 @@
         @include sm-down {
             padding-top:20px;
         }
-        .disabled {
-            opacity: 0.3;
-        }
     }
     &.active {
         @include transition(.5s);
@@ -302,11 +288,11 @@
 .place {
     position: relative;
     cursor: pointer;
-    margin: 20px 0px;
-    width: 100%;
+    min-width: 300px;
+    max-width: 435px;
+    margin:20px 40px;
     @include sm {
         margin:20px 60px 40px;
-        max-width: 435px;
     }
     @include xl {
        
@@ -334,11 +320,8 @@
         color:$white;
         position: absolute;
         bottom:20px;
-        left:20px;
+        left:-30px;
         z-index:2;
-        @include lg {
-            left: -20px;
-        }
         @include xl {
             left:-80px;
         }
@@ -349,11 +332,8 @@
         font-size: 15px;
         font-weight: bold;
         bottom:100px;
-        left:20px;
+        left:-30px;
         z-index:2;
-        @include lg {
-            left: -20px;
-        }
         @include xl {
             left:-80px;
         }
@@ -414,28 +394,23 @@
         letter-spacing: 2px;
         font-weight: 600;
         line-height: 1;
-        top: -20px;
-        right: 0px;
-        left: 0;
-        padding: 10px 20px;
-        z-index: 999;
-        text-align: center;
-        @include lg {
+        top:40px;
+        right:60px;
+        padding:10px 20px;
+        z-index:999;
+        @include sm {
             right:-40px;
-            top: 40px;
-            left: auto;
-            text-align: left;
         }
     }
     
 }
 .fact, .m-fact {
-    cursor: url("https://travelforyouth.org/wp-content/uploads/2021/11/register-cursor.png"), default !important;
+    cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), default !important;
     &:hover {
-        cursor: url("https://travelforyouth.org/wp-content/uploads/2021/11/register-cursor.png"), pointer !important;
+        cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), pointer !important;
     
         .place {
-         cursor: url("https://travelforyouth.org/wp-content/uploads/2021/11/register-cursor.png"), pointer !important;
+            cursor: url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/coming-soon-cursor.png'), pointer !important;
     
                 &:after {
                     height:100%;
@@ -477,9 +452,8 @@
 
 .bg-map {
     position:absolute;
-    top: -200px;
+    top:-100px;
     z-index: -1;
-    left: -270px;
 }
 
 .bg-white {
@@ -537,7 +511,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: url("https://travelforyouth.org/wp-content/uploads/2021/10/founders_quote.jpg");
+        background-image:url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/founders_quote.jpg');
     }
 
     .quote {
@@ -546,29 +520,25 @@
         &:before {
             content: '';
             position: absolute;
-            left:20px;
+            left:10px;
             top:40px;
             height: 45px;
             width:54px;
             background-repeat: no-repeat;
             background-position: center;
-            background-image:url('https://travelforyouth.org/wp-content/uploads/2021/10/Quotes.png');
-        }
-        p {
-            font-size: 18px;
-            letter-spacing: 0.43px;
-            line-height: 36px;
-            font-weight: 500;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            .author {
-                color:#8290A0;
-                display:block;
-                font-size: 16px;
-            }
+            background-image:url('https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Quotes.png');
         }
     }
-   
+    p {
+        font-size: 22px;
+        letter-spacing: 0.43px;
+        line-height: 36px;
+        font-weight: 500;
+        .author {
+            color:#8290A0;
+            display:block;
+        }
+    }
 }
 
 
