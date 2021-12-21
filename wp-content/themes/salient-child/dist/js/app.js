@@ -50,24 +50,20 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
 // 	  scrub: true
 // 	}, 
 //   });
-
-gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.set("#dot", {
-  scale: 0.7,
-  autoAlpha: 1
-}); // gsap.set("#dot", {transformOrigin: "50% 50%"});
+//  gsap.set("#dot", { scale: 0.7, autoAlpha: 1 });
+// gsap.set("#dot", {transformOrigin: "50% 50%"});
 
 gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot", {
   scrollTrigger: {
-    trigger: "#motionPath",
-    // start: "top",
-    // end: "bottom",
+    start: 'top top',
+    end: '+=447px',
     scrub: 1,
     markers: false // onUpdate: self => {
     //   gsap.to("#tractor", {rotation: () => self.direction === 1 ? 0 : -180, overwrite: 'auto'});
     // }
 
   },
-  duration: 3,
+  //   duration: 3,
   ease: "none",
   immediateRender: true,
   motionPath: {
@@ -78,14 +74,15 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot", {
     alignOrigin: [0.5, 0.5],
     autoRotate: true
   }
-}).reverse();
+});
 gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot2", {
   scrollTrigger: {
     trigger: "#motionPath2",
     scrub: 1,
+    start: '-=447px center',
+    end: 'bottom center',
     markers: false
   },
-  duration: 3,
   ease: "none",
   immediateRender: true,
   motionPath: {
@@ -97,15 +94,101 @@ gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot2", {
     autoRotate: true
   }
 });
-var tooltipSpan = document.getElementById('play');
-
-window.onmousemove = function (e) {
-  var x = e.clientX,
-      y = e.clientY;
-  tooltipSpan.style.top = y - 240 + 'px';
-  tooltipSpan.style.left = x - 240 + 'px';
-};
-
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot3", {
+  scrollTrigger: {
+    trigger: "#motionPath3",
+    scrub: 1,
+    start: 'top center',
+    end: 'bottom center',
+    markers: false
+  },
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path3",
+    align: "#path3",
+    start: 0,
+    end: 1,
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot4", {
+  scrollTrigger: {
+    trigger: "#motionPath4",
+    scrub: 1,
+    start: 'top center',
+    end: 'bottom center',
+    markers: false
+  },
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path4",
+    align: "#path4",
+    start: 1,
+    end: 0,
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot5", {
+  scrollTrigger: {
+    trigger: "#motionPath5",
+    scrub: 1,
+    start: 'top center',
+    end: 'bottom center',
+    markers: false
+  },
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path5",
+    align: "#path5",
+    start: 0,
+    end: 1,
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot6", {
+  scrollTrigger: {
+    trigger: ".testimonial",
+    scrub: 1,
+    start: 'center center',
+    end: '+=447px center',
+    markers: false
+  },
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path6",
+    align: "#path6",
+    start: 0,
+    end: 1,
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
+gsap_all__WEBPACK_IMPORTED_MODULE_0__.gsap.to("#dot7", {
+  scrollTrigger: {
+    trigger: "#motionPath7",
+    scrub: 1,
+    start: 'top center',
+    end: 'bottom center',
+    markers: false
+  },
+  ease: "none",
+  immediateRender: true,
+  motionPath: {
+    path: "#path7",
+    align: "#path7",
+    start: 0,
+    end: 1,
+    alignOrigin: [0.5, 0.5],
+    autoRotate: true
+  }
+});
 jQuery(document).ready(function ($) {
   $('#test').owlCarousel({
     loop: true,
@@ -127,7 +210,7 @@ jQuery(document).ready(function ($) {
       0: {
         items: 1,
         stagePadding: 0,
-        margin: 0
+        margin: 20
       },
       760: {
         items: 2,
@@ -155,7 +238,7 @@ jQuery(document).ready(function ($) {
       0: {
         items: 1,
         stagePadding: 0,
-        margin: 0
+        margin: 20
       },
       760: {
         items: 2,
@@ -194,6 +277,11 @@ jQuery(document).ready(function ($) {
     $("#mobilePlaces2").addClass('active');
     $("#mobilePlaces").removeClass('active');
   });
+  var mainArray = [];
+  $('.sbi_photo[data-full-res]').each(function () {
+    $(this).val().push(mainArray);
+  });
+  console.log(mainArray);
 });
 
 /***/ }),

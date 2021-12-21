@@ -96,12 +96,10 @@
        color:$white;
    }
    &.extra-btm{
-        padding-bottom: 220px;
+        padding-bottom: 560px;
         position: relative;
         z-index: 1;
-        @include md {
-            padding-bottom: 100px;
-        }
+        
    }
 }
 .pad80 {
@@ -131,8 +129,10 @@
         }
     }
 }
-
-.play {
+.vidb {
+    position: relative;    
+}
+.bigplay {
     background: url('/wp-content/themes/salient-child/src/img/Play_button.svg');
     position: absolute;
     left:0px;
@@ -185,6 +185,7 @@
 .about-pad {
     padding-left:40px;
    padding-right:20px;
+   position: relative;
    @include sm-down {
         h2 {
             padding-top:40px;
@@ -210,6 +211,9 @@
     
     @include sm {
         padding:100px 0 40px;
+    }
+    @include lg {
+        padding:200px 0 40px;
     }
     
 }
@@ -303,10 +307,11 @@
     position: relative;
     cursor: pointer;
     margin: 20px 0px;
+    max-width: 435px;
     width: 100%;
     @include sm {
         margin:20px 60px 40px;
-        max-width: 435px;
+       
     }
     @include xl {
        
@@ -485,15 +490,14 @@
 .bg-white {
     background:$white;
     color:$black;
-    padding:80px 0;
+    padding:120px 0 80px;
     
     h2 {
         font-size: 40px;
         letter-spacing: 0;
         line-height: 1;
         display: block;
-        margin: 20px auto;
-        max-width: 830px;
+        margin: 20px 20px 20px 80px;
         @include lg {
             font-size: 70px;
             line-height: 90px;
@@ -586,9 +590,15 @@
         }
     }
     
-    h2 {
+    .heading-wrap {
         text-align: center;
         position: relative;
+        width:500px;
+        margin:auto;
+        h2 {
+            padding:0;
+            margin:0;
+        }
         @include lg {
             top:300px;
         }
@@ -612,6 +622,7 @@
         padding-right:40px;
         margin-top:60px;
         position: relative;
+        background:$white;
         @include lg {
             position: absolute;
         }
@@ -699,6 +710,7 @@
 
 .instagram-area {
     background:#eee;
+    padding-bottom:160px;
 
     .h2 {
         color:$black;
@@ -759,10 +771,35 @@
     }
 }
 
+.heading-surround {
+   
+    position: relative;
+    @include lg {
+        left:19%;
+    }
+}
 
-
-
-
+.heading-wrap {
+    position: relative;
+}
+.insta-wrap {
+    width:600px;
+    position: relative;
+    margin:auto;
+}
+.tiles {
+    position: relative;
+    z-index: 80;
+}
+.btm-cta {
+    position: relative;
+}
+.pad-btm {
+    padding-bottom:150px;
+}
+.pad-l {
+    padding-left: 40px;
+}
 
 
 

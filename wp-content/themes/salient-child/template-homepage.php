@@ -25,28 +25,27 @@ $nectar_options = get_nectar_theme_options();
         </div>
      </div> 
     <div class="path1 path"> 
-        <svg width="447px" height="159px" viewBox="0 0 447 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>Hero Path</title>
-            <defs>
-                <circle id="path-1" cx="36" cy="36" r="36"></circle>
-                <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="74" height="74">
-                    <rect x="-1" y="-1" width="74" height="74" fill="white"></rect>
-                    <use xlink:href="#path-1" fill="black"></use>
-                </mask>
-            </defs>
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g transform="translate(-993.000000, -322.000000)">
-                    <g transform="translate(993.374794, 323.000000)">
-                        <g id="dot" transform="translate(15.625206, 0.000000)">
-                            <use id="Oval" stroke="#8290A0" mask="url(#mask-2)" stroke-width="2" opacity="0.900140807" stroke-linejoin="bevel" stroke-dasharray="8" xlink:href="#path-1"></use>
-                            <circle id="Oval" fill="#E4E85C" cx="36.5" cy="36.5" r="7.5"></circle>
-                        </g>
-                        <path d="M6.405,111 L6.405,109.71 L1.485,109.71 L1.485,106.305 L5.28,106.305 L5.28,105.015 L1.485,105.015 L1.485,101.7 L6.15,101.7 L6.15,100.41 L5.68434189e-14,100.41 L5.68434189e-14,111 L6.405,111 Z M15.872916,111 L17.792916,107.745 C18.137916,107.16 18.422916,106.53 18.422916,106.53 L18.452916,106.53 C18.452916,106.53 18.695365,106.981837 18.9818956,107.488776 L19.127916,107.745 L19.127916,107.745 L21.047916,111 L22.727916,111 L19.382916,105.54 L22.517916,100.41 L20.807916,100.41 L19.142916,103.275 C18.797916,103.86 18.497916,104.535 18.497916,104.535 L18.467916,104.535 L18.429396,104.45868 C18.330516,104.2638 18.056916,103.731 17.792916,103.275 L16.127916,100.41 L14.417916,100.41 L17.552916,105.54 L14.207916,111 L15.872916,111 Z M32.705832,111 L32.705832,107.085 L35.090832,107.085 C37.025832,107.085 38.420832,105.735 38.420832,103.725 C38.420832,101.715 37.025832,100.41 35.090832,100.41 L31.220832,100.41 L31.220832,111 L32.705832,111 Z M34.850832,105.795 L32.705832,105.795 L32.705832,101.7 L34.865832,101.7 C36.125832,101.7 36.905832,102.45 36.905832,103.725 C36.905832,105 36.125832,105.795 34.850832,105.795 Z M53.273748,111 L53.273748,109.71 L48.533748,109.71 L48.533748,100.41 L47.048748,100.41 L47.048748,111 L53.273748,111 Z M66.161664,111.18 C69.221664,111.18 71.591664,108.75 71.591664,105.63 C71.591664,102.585 69.221664,100.23 66.161664,100.23 C63.101664,100.23 60.716664,102.585 60.716664,105.63 C60.716664,108.75 63.101664,111.18 66.161664,111.18 Z M66.161664,109.815 C64.001664,109.815 62.246664,108.015 62.246664,105.63 C62.246664,103.32 64.001664,101.58 66.161664,101.58 C68.321664,101.58 70.061664,103.32 70.061664,105.63 C70.061664,108.015 68.321664,109.815 66.161664,109.815 Z M81.95958,111 L81.95958,106.785 L84.22458,106.785 L86.45958,111 L88.13958,111 L85.88958,106.89 C85.69458,106.545 85.57458,106.41 85.57458,106.41 L85.57458,106.38 C86.72958,106.005 87.47958,104.865 87.47958,103.515 C87.47958,102.12 86.77458,101.055 85.69458,100.65 C85.28958,100.5 84.82458,100.41 83.71458,100.41 L80.47458,100.41 L80.47458,111 L81.95958,111 Z M84.08958,105.495 L81.95958,105.495 L81.95958,101.7 L83.66958,101.7 C84.49458,101.7 84.83958,101.79 85.12458,101.94 C85.66458,102.24 85.96458,102.795 85.96458,103.575 C85.96458,104.76 85.24458,105.495 84.08958,105.495 Z M103.217496,111 L103.217496,109.71 L98.297496,109.71 L98.297496,106.305 L102.092496,106.305 L102.092496,105.015 L98.297496,105.015 L98.297496,101.7 L102.962496,101.7 L102.962496,100.41 L96.812496,100.41 L96.812496,111 L103.217496,111 Z" id="EXPLORE" fill="#EFEFF1" fill-rule="nonzero"></path>
-                        <path d="M505.623378,195.698111 C388.560825,112.999161 244.602591,42.3076609 87.625206,35.300679" id="path1" stroke="#8290A0" opacity="0.900208939" stroke-dasharray="8"></path>
-                    </g>
-                </g>
+        
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 506 196.7" style="enable-background:new 0 0 506 196.7;" xml:space="preserve">
+        <path id="EXPLORE" class="st0" d="M6.8,112v-1.3H1.9v-3.4h3.8V106H1.9v-3.3h4.7v-1.3H0.4V112H6.8z M16.3,112l1.9-3.3
+            c0.3-0.6,0.6-1.2,0.6-1.2l0,0c0,0,0.2,0.5,0.5,1l0.1,0.3l0,0l1.9,3.3H23l-3.3-5.5l3.1-5.1h-1.7l-1.7,2.9c-0.3,0.6-0.6,1.3-0.6,1.3
+            l0,0v-0.1c-0.1-0.2-0.4-0.7-0.6-1.2l-1.7-2.9h-1.7l3.1,5.1l-3.3,5.5h1.7C16.3,112.1,16.3,112,16.3,112z M33.1,112v-3.9h2.4
+            c1.9,0,3.3-1.3,3.3-3.4c0-2-1.4-3.3-3.3-3.3h-3.9V112H33.1L33.1,112z M35.3,106.8h-2.1v-4.1h2.2c1.3,0,2,0.8,2,2
+            C37.3,106,36.5,106.8,35.3,106.8z M53.7,112v-1.3H49v-9.3h-1.5V112H53.7z M66.6,112.2c3.1,0,5.4-2.4,5.4-5.5c0-3-2.4-5.4-5.4-5.4
+            s-5.4,2.4-5.4,5.4C61.1,109.8,63.5,112.2,66.6,112.2z M66.6,110.8c-2.2,0-3.9-1.8-3.9-4.2c0-2.3,1.8-4.1,3.9-4.1
+            c2.2,0,3.9,1.7,3.9,4.1C70.5,109,68.7,110.8,66.6,110.8z M82.4,112v-4.2h2.3l2.2,4.2h1.7l-2.2-4.1c-0.2-0.3-0.3-0.5-0.3-0.5l0,0
+            c1.2-0.4,1.9-1.5,1.9-2.9s-0.7-2.5-1.8-2.9c-0.4-0.1-0.9-0.2-2-0.2H81V112H82.4L82.4,112z M84.5,106.5h-2.1v-3.8h1.7
+            c0.8,0,1.2,0.1,1.5,0.2c0.5,0.3,0.8,0.9,0.8,1.6C86.4,105.8,85.6,106.5,84.5,106.5z M103.6,112v-1.3h-4.9v-3.4h3.8V106h-3.8v-3.3
+            h4.7v-1.3h-6.1V112H103.6z"/>
+            <g id="dot">
+                <circle id="stay" class="st1" cx="52" cy="37" r="36"/>
+       
+                <circle id="oval" class="st2" cx="52.5" cy="37.5" r="7.5"/>
             </g>
+        <path id="path1" class="st3" d="M522.3,209.9C489.3,174.7,389.3,111.9,283.4,73
+            C183.5,36.3,88.5,35.3,52.5,37"/>
         </svg>
+
     </div>
 </div>
 
@@ -64,30 +63,40 @@ $nectar_options = get_nectar_theme_options();
 </div>
 
 <div class="blackbg special-relative">
-    <div class="path2 path" id="motionPath2"> 
-        <svg viewBox="0 0 1404 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <title>About Us</title>
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g>
-                    <g>
-                        <g id="dot2" transform="translate(0.000000, 189.794588)">
-                            <circle id="Oval" fill="#E4E85C" cx="10" cy="10" r="5"></circle>
-                            <circle id="Oval" stroke="#E4E85C" opacity="0.450558685" cx="10" cy="10" r="9.5"></circle>
-                        </g>
-                        <g transform="translate(10.322000, 271.932588) rotate(-90.000000) translate(-10.322000, -271.932588) translate(-39.000000, 266.794588)" fill-rule="nonzero">
-                            <path d="M1.862,10.108 L2.702,7.56 L6.188,7.56 L7.028,10.108 L8.89,10.108 L5.39,0.168 L3.5,0.168 L0,10.108 L1.862,10.108 Z M5.74,6.09 L3.136,6.09 L4.018,3.43 C4.214,2.87 4.438,1.89 4.438,1.89 L4.466,1.89 C4.466,1.89 4.676,2.87 4.858,3.43 L5.74,6.09 Z M18.012,10.108 C19.846,10.108 21.442,9.212 21.442,7.224 C21.442,6.216 20.924,5.208 19.832,4.886 L19.832,4.858 C20.588,4.452 21.036,3.654 21.036,2.73 C21.036,1.092 19.762,0.168 17.97,0.168 L14.414,0.168 L14.414,10.108 L18.012,10.108 Z M17.97,4.228 L16.22,4.228 L16.22,1.722 L17.942,1.722 C18.782,1.722 19.202,2.24 19.202,2.954 C19.202,3.668 18.754,4.228 17.97,4.228 Z M18.152,8.554 L16.22,8.554 L16.22,5.684 L18.152,5.684 C19.062,5.684 19.594,6.286 19.594,7.112 C19.594,7.952 19.076,8.554 18.152,8.554 Z M32.104,10.276 C35.03,10.276 37.242,7.994 37.242,5.068 C37.242,2.226 35.03,0 32.104,0 C29.178,0 26.966,2.226 26.966,5.068 C26.966,7.994 29.178,10.276 32.104,10.276 Z M32.104,8.624 C30.284,8.624 28.828,7.112 28.828,5.068 C28.828,3.108 30.284,1.652 32.104,1.652 C33.924,1.652 35.38,3.108 35.38,5.068 C35.38,7.112 33.924,8.624 32.104,8.624 Z M47.204,10.276 C49.598,10.276 51.208,8.764 51.208,6.538 L51.208,0.168 L49.402,0.168 L49.402,6.524 C49.402,7.868 48.52,8.624 47.19,8.624 C45.86,8.624 44.992,7.868 44.992,6.538 L44.992,0.168 L43.186,0.168 L43.186,6.538 C43.186,8.764 44.796,10.276 47.204,10.276 Z M61.702,10.108 L61.702,1.722 L64.964,1.722 L64.964,0.168 L56.634,0.168 L56.634,1.722 L59.896,1.722 L59.896,10.108 L61.702,10.108 Z" fill="#EAEAEA"></path>
-                            <path d="M82.06,10.276 C84.454,10.276 86.064,8.764 86.064,6.538 L86.064,0.168 L84.258,0.168 L84.258,6.524 C84.258,7.868 83.376,8.624 82.046,8.624 C80.716,8.624 79.848,7.868 79.848,6.538 L79.848,0.168 L78.042,0.168 L78.042,6.538 C78.042,8.764 79.652,10.276 82.06,10.276 Z M95.368,10.276 C97.44,10.276 98.644,8.946 98.644,7.364 C98.644,4.186 93.968,4.62 93.968,2.856 C93.968,2.156 94.626,1.666 95.466,1.666 C96.712,1.666 97.664,2.534 97.664,2.534 L98.448,1.064 C98.448,1.064 97.44,0 95.48,0 C93.576,0 92.148,1.232 92.148,2.884 C92.148,5.936 96.838,5.628 96.838,7.406 C96.838,8.218 96.152,8.61 95.396,8.61 C93.996,8.61 92.918,7.56 92.918,7.56 L91.938,8.918 C91.938,8.918 93.156,10.276 95.368,10.276 Z" fill="#E4E85C"></path>
-                        </g>
-                        <path id="path2" d="M15,181.095267 C46.4070953,117.448379 174.933105,0 364.5,0 C554.066895,0 641.797069,127.961546 981.118783,159.645129 C1122.9211,172.885676 1274.58229,152.4624 1403.098,89.3022815" stroke="#8290A0" opacity="0.900208939" stroke-dasharray="8"></path>
-                    </g>
-                </g>
-            </g>
-        </svg>
-    </div>
     <div class="wrap rel">
         <img class="about-img" src="<?php the_field('about_image'); ?>">
         <div class="row about-pad">
-            <div class="col-xs-12 col-md-6">
+            <div class="path2 path" id="motionPath2"> 
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1404 383" style="enable-background:new 0 0 1404 323;" xml:space="preserve">
+                    <title>About Us</title>
+                    <g id="assets">
+                        <g id="Homepage-Design-Copy-9" transform="translate(-112.000000, -1578.000000)">
+                            <g id="Group-15" transform="translate(112.000000, 1599.205412)">
+                                <g id="dot2" transform="translate(0.000000, 189.794588)">
+                                    <circle id="Oval" class="st0" cx="10" cy="10" r="5"/>
+                                    <circle id="Oval_00000142868518208868632640000003839991568382687918_" class="st1" cx="10" cy="10" r="9.5"/>
+                                </g>
+                                
+                                    <g id="About-Us-Copy" transform="translate(10.322000, 271.932588) rotate(-90.000000) translate(-10.322000, -271.932588) translate(-39.000000, 266.794588)">
+                                    <path id="ABOUT" class="st2" d="M1.9,10.1l0.8-2.5h3.5L7,10.1h1.9L5.4,0.2H3.5L0,10.1H1.9z M5.7,6.1H3.1L4,3.4
+                                        c0.2-0.6,0.4-1.5,0.4-1.5h0c0,0,0.2,1,0.4,1.5L5.7,6.1z M18,10.1c1.8,0,3.4-0.9,3.4-2.9c0-1-0.5-2-1.6-2.3v0
+                                        C20.6,4.5,21,3.7,21,2.7c0-1.6-1.3-2.6-3.1-2.6h-3.6v9.9H18z M18,4.2h-1.8V1.7h1.7c0.8,0,1.3,0.5,1.3,1.2S18.8,4.2,18,4.2z
+                                        M18.2,8.6h-1.9V5.7h1.9c0.9,0,1.4,0.6,1.4,1.4C19.6,8,19.1,8.6,18.2,8.6z M32.1,10.3c2.9,0,5.1-2.3,5.1-5.2
+                                        C37.2,2.2,35,0,32.1,0S27,2.2,27,5.1C27,8,29.2,10.3,32.1,10.3z M32.1,8.6c-1.8,0-3.3-1.5-3.3-3.6c0-2,1.5-3.4,3.3-3.4
+                                        s3.3,1.5,3.3,3.4C35.4,7.1,33.9,8.6,32.1,8.6z M47.2,10.3c2.4,0,4-1.5,4-3.7V0.2h-1.8v6.4c0,1.3-0.9,2.1-2.2,2.1
+                                        c-1.3,0-2.2-0.8-2.2-2.1V0.2h-1.8v6.4C43.2,8.8,44.8,10.3,47.2,10.3z M61.7,10.1V1.7H65V0.2h-8.3v1.6h3.3v8.4H61.7z"/>
+                                    <path id="US" class="st3" d="M82.1,10.3c2.4,0,4-1.5,4-3.7V0.2h-1.8v6.4c0,1.3-0.9,2.1-2.2,2.1c-1.3,0-2.2-0.8-2.2-2.1V0.2H78
+                                        v6.4C78,8.8,79.7,10.3,82.1,10.3z M95.4,10.3c2.1,0,3.3-1.3,3.3-2.9c0-3.2-4.7-2.7-4.7-4.5c0-0.7,0.7-1.2,1.5-1.2
+                                        c1.2,0,2.2,0.9,2.2,0.9l0.8-1.5c0,0-1-1.1-3-1.1c-1.9,0-3.3,1.2-3.3,2.9c0,3.1,4.7,2.7,4.7,4.5c0,0.8-0.7,1.2-1.4,1.2
+                                        c-1.4,0-2.5-1.1-2.5-1.1l-1,1.4C91.9,8.9,93.2,10.3,95.4,10.3z"/>
+                                </g>
+                                <path id="path2" class="st4" d="M15,181.1C46.4,117.4,174.9,0,364.5,0s277.3,128,616.6,159.6c141.8,13.2,293.5-7.2,422-70.3"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="col-xs-12 col-md-6 pad-l">
                 <h2><?php the_field('about_h2'); ?></h2>
                 <div class="indent">
                     <p><?php the_field('about_text'); ?></p>
@@ -97,15 +106,49 @@ $nectar_options = get_nectar_theme_options();
         </div>
         <div class="row center-xs start-xl pad80">
             <div class="col-xs-12  col-md-8 ">
-                <a data-fancybox="videos" class="videolightbox" href="<?php the_field('video_lightbox_url'); ?>">
-                    <div class="hovwrap">
-                        <img src="<?php the_field('video_image_background'); ?>">
-                        <div id="play"></div>
-                    </div>
-                    <div class="play"></div>
-                </a>
+                <div class="vidb">
+                    <a href="<?php the_field('video_lightbox_url'); ?>" data-style="default" data-parent-hover="" data-font-style="p" data-color="default-accent-color" class="play_button_with_text large nectar_video_lightbox" data-fancybox="">
+                        <span>
+                            <span class="screen-reader-text">Play Video</span>
+                            <span class="play">
+                                <span class="inner-wrap">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600px" height="800px" x="0px" y="0px" viewBox="0 0 600 800" enable-background="new 0 0 600 800" xml:space="preserve"><path fill="none" d="M0-1.79v800L600,395L0-1.79z"></path> </svg>
+                                </span>
+                            </span>
+                        </span>
+                    </a>
+                    <a data-fancybox="videos" class="videolightbox" href="<?php the_field('video_lightbox_url'); ?>">
+                        <div class="hovwrap">
+                            <img src="<?php the_field('video_image_background'); ?>">
+                        </div>
+        
+                    <!-- <div class="bigplay">
+                            <svg class="pulse-svg" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <circle class="circle first-circle"  cx="25" cy="25" r="25"></circle> -->
+                            <!-- <circle class="circle second-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+                            <circle class="circle third-circle" fill="#FF6347" cx="25" cy="25" r="25"></circle>
+                            <circle class="circle" fill="#FF6347" cx="25" cy="25" r="25"></circle> -->
+                            <!-- </svg>
+                        </div>  -->
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="path3 path" id="motionPath3">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 955 761" style="enable-background:new 0 0 955 761;" xml:space="preserve">
+            <g>
+                <g id="Homepage-Design-Copy-9" transform="translate(71.000000, -2676.000000)">
+                    <g id="Group-23" transform="translate(-69.736570, 2676.719609)">
+                        <path id="path3" class="st0" d="M0,0c64,254,88.3,577.5,350.7,467.8c228-95.3,375.6-22.5,442.7,218.5"/>
+                        <g id="dot3" transform="translate(782.985167, 676.280391)">
+                            <circle id="Oval" class="st1" cx="10" cy="10" r="5"/>
+                            <circle id="Oval_00" class="st2" cx="10" cy="10" r="9.5"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
     </div>
 </div>
 
@@ -195,11 +238,36 @@ $nectar_options = get_nectar_theme_options();
 </div><!-- blackbg -->
 
 <div class="bg-white">
-    <div class="wrap rel">
+    <div class="wrap">
         <div class="heading-surround">
+            <div class="path4 path" id="motionPath4">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1285 793" style="enable-background:new 0 0 1285 793;" xml:space="preserve">
+                    <g id="Homepage-Design-Copy-9" transform="translate(-292.000000, -4680.000000)">
+                        <g id="Group-24" transform="translate(292.000000, 4681.447835)">
+                            <path id="path4" class="st0" d="M9,680.6c46.8-193.2,206.4-297.7,479-313.5c257-14.9,531.3-108.8,672.7-273.5
+                                c32.8-38.2,73.7-69.4,122.7-93.5"/>
+                            
+                                <g id="Why-Us" transform="translate(9.620000, 752.114665) rotate(-90.000000) translate(-9.620000, -752.114665) translate(-29.497500, 746.609665)">
+                                <path id="WHY" class="st1" d="M4.9,10.8l1.6-6.3c0.2-0.7,0.3-1.4,0.3-1.4h0c0,0,0.1,0.7,0.3,1.4l1.6,6.3H11l2.7-10.6h-2L10,7.5
+                                    C9.8,8.1,9.8,8.7,9.8,8.7h0c0,0,0-0.5-0.2-1.1L7.7,0.2H6L4.1,7.5C3.9,8.2,3.9,8.7,3.9,8.7h0c0,0,0-0.5-0.2-1.1L2,0.2H0l2.7,10.6
+                                    H4.9z M21.6,10.8V6.4h4.9v4.5h1.9V0.2h-1.9v4.5h-4.9V0.2h-1.9v10.6H21.6z M39.5,10.8V6.4l3.5-6.2h-2.2l-1.7,3.1
+                                    c-0.3,0.7-0.6,1.4-0.6,1.4h0c0,0-0.3-0.8-0.6-1.4l-1.7-3.1h-2.2l3.5,6.2v4.5H39.5z"/>
+                                <path id="US" class="st2" d="M60.8,11c2.6,0,4.3-1.6,4.3-4V0.2h-1.9V7c0,1.4-0.9,2.2-2.4,2.2S58.4,8.4,58.4,7V0.2h-1.9V7
+                                    C56.5,9.4,58.2,11,60.8,11z M74.7,11c2.2,0,3.5-1.4,3.5-3.1c0-3.4-5-2.9-5-4.8c0-0.8,0.7-1.3,1.6-1.3c1.3,0,2.4,0.9,2.4,0.9
+                                    L78,1.1l0,0C77.8,1,76.8,0,74.8,0c-2,0-3.6,1.3-3.6,3.1c0,3.3,5,2.9,5,4.8c0,0.9-0.7,1.3-1.5,1.3c-1.5,0-2.7-1.1-2.7-1.1l-1,1.5
+                                    c0,0,0,0,0,0l0.1,0.1C71.5,10,72.7,11,74.7,11z"/>
+                            </g>
+                            <g id="dot4" transform="translate(0.000000, 685.552165)">
+                                <circle id="Oval" class="st3" cx="10" cy="10" r="5"/>
+                                <circle id="Oval_00000102503924244504823150000002747920199179435672_" class="st4" cx="10" cy="10" r="9.5"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>            
+            </div>
             <h2><?php the_field('mission_h2'); ?></h2>
         </div>
-        <div class="row">
+        <div class="row pad-btm">
             <div class="col-sx-12 col-md-6">
                 <img class="up" src="<?php the_field('mission_image'); ?>">
             </div>
@@ -219,7 +287,23 @@ $nectar_options = get_nectar_theme_options();
         </div>
     </div>
     <div class="testimonial">
-        <h2><?php the_field('testimonial_heading'); ?></h2>
+        <div class="heading-wrap">
+            <div class="path5 path" id="motionPath5">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 905 355" style="enable-background:new 0 0 905 355;" xml:space="preserve">
+                    <g id="Homepage-Design-Copy-9" transform="translate(-707.000000, -6387.000000)">
+                        <g transform="translate(707.000000, 6388.134069)">
+                            
+                            <g id="dot5" transform="translate(10.000000, 343.865931) scale(-1, 1) translate(-10.000000, -343.865931) translate(0.000000, 333.865931)">
+                                <circle id="Oval" class="st0" cx="10" cy="10" r="5"/>
+                                <circle id="Oval_00000066485837157968493630000008426532003153735301_" class="st1" cx="10" cy="10" r="9.5"/>
+                            </g>
+                            <path id="path5" class="st2" d="M903.6,0C720.4,47.1,499.7,67.7,328,50.1C89.2,25.6-16.6,119.9,10.5,332.9"/>
+                        </g>
+                    </g>
+                </svg>
+            </div> 
+            <h2><?php the_field('testimonial_heading'); ?></h2>
+        </div>
         <div class="owl-carousel" id="test">
             <?php while( have_rows('testimonials') ): the_row(); ?>
                 <div class="item">
@@ -242,44 +326,77 @@ $nectar_options = get_nectar_theme_options();
     </div>
 </div>
 <div class="instagram-area">
-    <h2 class="h2">
-        <?php the_field('instagram_title'); ?>
-    </h2>
+    <div class="insta-wrap">
+        <div class="path6 path" id="motionPath6">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 988 1000" style="enable-background:new 0 0 988 1000;" xml:space="preserve">
+                <g id="Homepage-Design-Copy-9" transform="translate(150.000000, -6871.000000)">
+                    <g id="Group-28" transform="translate(-148.601562, 6872.500000)">
+                        <path id="path6" class="st2" d="M0,0c204.3,40.6,255.9,344.6,273.6,428c62.1,293.4,284,295.5,429,334.5
+                            c96.7,26,152,72.9,166,140.7"/>
+                        
+                        <g id="dot6" transform="translate(868.601562, 914.500000) scale(1, -1) translate(-868.601562, -914.500000) translate(858.601562, 904.500000)">
+                            <circle id="Oval" class="st3" cx="10" cy="10" r="5"/>
+                            <circle id="Oval_00000101815034747927587810000009340574384191657398_" class="st4" cx="10" cy="10" r="9.5"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <h2 class="h2">
+            <?php the_field('instagram_title'); ?>
+        </h2>
+   </div>
     <div class="wrap tiles">
         <div class="row middle-xs">
             <div class="col-xs-3">
-                <div class="box">
-                   <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_4.jpg">
-                </div>
+                <a href="https://www.instagram.com/p/CR7kO0Cpg_i/" target="_blank" class="box">
+                   <img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_4.jpg">
+                </a>
             </div>
             <div class="col-xs-6">
                 <div class="box">
                     <div class="row bottom-xs btm-15">
                         <div class="col-xs-7">
-                            <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_6.jpg">
+                            <a href="https://www.instagram.com/p/CQzNixOpC91/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_6.jpg"></a>
                         </div>
                         <div class="col-xs-5">
-                            <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_1.jpg">
+                            <a href="https://www.instagram.com/p/CQhZdWZptcF/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_1.jpg"></a>
                         </div>
                     </div>
                     <div class="row top-xs">
                         <div class="col-xs-5">
-                            <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_3.jpg">
+                            <a href="https://www.instagram.com/p/CRP7y-gJ9NV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_3.jpg"></a>
                         </div>
                         <div class="col-xs-7">
-                            <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_5.jpg">
+                            <a href="https://www.instagram.com/p/CQU27SkJ9vV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_5.jpg"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-3">
-                <div class="box">
-                    <img src="https://travelforyouth.redolive.co/wp-content/uploads/2021/10/Insta_2.jpg">
-                </div>
+                <a href="https://www.instagram.com/p/CQZIVlZJeTf/" target="_blank" class="box">
+                    <img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_2.jpg">
+                </a>
             </div>
         </div>
     </div>
 </div>
-<?php  $short = get_field('paste_footer_global_shortcode');  echo do_shortcode($short); ?>
+<div class="btm-cta">
+    <div class="path7 path" id="motionPath7">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1446 664" style="enable-background:new 0 0 1446 664;" xml:space="preserve">
+            <g id="Homepage-Design-Copy-9" transform="translate(-161.000000, -8609.000000)">
+                <g id="Group-29" transform="translate(161.000000, 8610.000000)">
+                    <g id="dot7" transform="translate(10.000000, 653.000000) scale(1, -1) translate(-10.000000, -653.000000) translate(0.000000, 643.000000)">
+                        <circle id="Oval" class="st0" cx="10" cy="10" r="5"/>
+                        <circle id="Oval_00000121252498402912549620000014521032314177114537_" class="st1" cx="10" cy="10" r="9.5"/>
+                    </g>
+                    <path id="path7" class="st2" d="M1444.9,0c-102.9,125.9-232.4,197.1-388.5,213.7c-329.3,34.9-500.1,20.3-662.8,65.3
+                        C180.5,338,5.2,462.2,9,621.5c0.6,9.3,1,16.2,1.3,20.9"/>
+                </g>
+            </g>
+        </svg>                    
+    </div>
+    <?php  $short = get_field('paste_footer_global_shortcode');  echo do_shortcode($short); ?>
+</div>
 <?php endwhile; endif; ?>				
 <?php get_footer(); ?>
