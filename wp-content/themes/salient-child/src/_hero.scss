@@ -96,9 +96,13 @@
        color:$white;
    }
    &.extra-btm{
-        padding-bottom: 560px;
+        padding-bottom: 450px;
         position: relative;
-        z-index: 1;
+
+        
+        @include xl {
+            padding-bottom: 560px;
+        }
         
    }
 }
@@ -490,17 +494,21 @@
 .bg-white {
     background:$white;
     color:$black;
-    padding:120px 0 80px;
+    padding:20px 0 80px;
+    @include lg {
+        padding:120px 0 80px;
+    }
     
     h2 {
         font-size: 40px;
         letter-spacing: 0;
         line-height: 1;
         display: block;
-        margin: 20px 20px 20px 80px;
+        margin: 20px 20px 20px 20px;
         @include lg {
             font-size: 70px;
             line-height: 90px;
+            margin: 20px 20px 20px 80px;
         }
     }
     .lrg{
@@ -593,7 +601,8 @@
     .heading-wrap {
         text-align: center;
         position: relative;
-        width:500px;
+        padding-bottom: 40px;
+       
         margin:auto;
         h2 {
             padding:0;
@@ -601,6 +610,7 @@
         }
         @include lg {
             top:300px;
+            width:500px;
         }
     }
     p {
@@ -783,9 +793,12 @@
     position: relative;
 }
 .insta-wrap {
-    width:600px;
+   
     position: relative;
     margin:auto;
+    @include lg {
+        width:600px;
+    }
 }
 .tiles {
     position: relative;
@@ -795,20 +808,78 @@
     position: relative;
 }
 .pad-btm {
-    padding-bottom:150px;
+    padding-bottom:40px;
+    @include lg {
+        padding-bottom:150px;
+    }
 }
 .pad-l {
     padding-left: 40px;
 }
 
+.dome {
+    position:absolute;
+    text-align: center; 
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    height: 300px;
+    padding: 70px 20px 0;
+    display: block;
+    overflow: hidden;
+    z-index: 10;
+    cursor: pointer;
+    @include md {
+        height:250px;
+    }
+
+    h2 {
+        font-family: $font;
+        font-size:40px;
+        font-weight: 500;
+        line-height: 1.5;
+        span {
+            font-family: $font;
+            display:block;
+            font-size:24px;
+            color:#8290A0;
+            font-weight: 300;
+        }
+    }
+    
+    &:before {
+        content: "";
+        position:absolute;
+        width: 700px;
+        height: 350px;
+        border-radius: 350px 350px 0 0;
+        border: 1px solid #000;
+        bottom: -100px;
+        left:-110px;
+        right:0;
+        margin:auto;
+        background:#000;
+        @include transition(.3s);
+
+        @include xs {
+            left:0;
+        }
+    }
+    &:hover {
+        h2 span {
+            color:$black;
+        }
+        &:before {
+            background: #8290A0;
+        }
+    }
+}
 
 
 @include sm-down {
     .vc_column-inner {
         padding-left:20px;
-    }
-    .heading-surround {
-        padding-left:40px;
     }
     .scrolled-down {
         background:$black !important;

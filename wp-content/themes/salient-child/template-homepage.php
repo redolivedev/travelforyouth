@@ -235,6 +235,23 @@ $nectar_options = get_nectar_theme_options();
             <?php // get_template_part( 'locations-mobile' ); ?>
         </div>
     </div>
+
+
+        <div class="dome" href="javascript:void(0);" onclick="togglePopup('61c0df390fcf743752cb40d5')">
+            <div class="rel">
+                <img src="https://travelforyouth.org/wp-content/uploads/2021/12/Quiz_icon.png" alt="TFY Youth Travel">
+                <h2><span>Find Your Perfect TFY Trip</span> Take our Trip Finder Quiz</h2>
+            </div>
+            <div>
+                <div id='61c0df390fcf743752cb40d5' data-title='Trip Quiz' data-embedCookieDays='10' data-embedScheduling='false' data-embedTimed='true' data-embedExit='false' data-embedTimeFormat='0' data-embedTimeValue='5' data-embedBorderRadius='0' data-embedFontSize='12' data-textcolor='#ffffff' data-bgcolor='#fb5f66' data-prop='outgrow-p' data-type='outgrow-b' data-url='https://travelforyouth.outgrow.us/61c0df390fcf743752cb40d5?q=1' data-text='Get Started'>
+                </div>
+                <script src='//dyv6f9ner1ir9.cloudfront.net/assets/js/nploader.js'></script>
+                <script>initIframe('61c0df390fcf743752cb40d5');</script>
+            </div>
+            <style>.outgrow-l,.outgrow-b {display: none !important}</style>
+        </div><!-- dome -->
+    </div>
+</div>
 </div><!-- blackbg -->
 
 <div class="bg-white">

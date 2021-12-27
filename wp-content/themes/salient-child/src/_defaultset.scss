@@ -3,7 +3,7 @@ $grid-breakpoints: (
     name: xs,
     columns: 12,
     gutter: 10px,
-    min-width: 0
+    min-width: 500
   ),
   small: (
     name: sm,
@@ -71,6 +71,12 @@ $screen-xl-min: 1400px;
       @content;
   }
 } 
+@mixin xs {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
 @mixin sm {
     @media (min-width: #{$screen-sm-min}) {
         @content;
