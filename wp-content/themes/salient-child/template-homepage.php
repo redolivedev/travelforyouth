@@ -77,7 +77,7 @@ $nectar_options = get_nectar_theme_options();
                                     <circle id="Oval_00000142868518208868632640000003839991568382687918_" class="st1" cx="10" cy="10" r="9.5"/>
                                 </g>
                                 
-                                    <g id="About-Us-Copy" transform="translate(10.322000, 271.932588) rotate(-90.000000) translate(-10.322000, -271.932588) translate(-39.000000, 266.794588)">
+                                    <g class="copy" transform="translate(10.322000, 271.932588) rotate(-90.000000) translate(-10.322000, -271.932588) translate(-39.000000, 266.794588)">
                                     <path id="ABOUT" class="st2" d="M1.9,10.1l0.8-2.5h3.5L7,10.1h1.9L5.4,0.2H3.5L0,10.1H1.9z M5.7,6.1H3.1L4,3.4
                                         c0.2-0.6,0.4-1.5,0.4-1.5h0c0,0,0.2,1,0.4,1.5L5.7,6.1z M18,10.1c1.8,0,3.4-0.9,3.4-2.9c0-1-0.5-2-1.6-2.3v0
                                         C20.6,4.5,21,3.7,21,2.7c0-1.6-1.3-2.6-3.1-2.6h-3.6v9.9H18z M18,4.2h-1.8V1.7h1.7c0.8,0,1.3,0.5,1.3,1.2S18.8,4.2,18,4.2z
@@ -238,7 +238,7 @@ $nectar_options = get_nectar_theme_options();
 
 
         <div class="dome" href="javascript:void(0);" onclick="togglePopup('61c0df390fcf743752cb40d5')">
-            <div class="rel">
+            <div class="dome-text">
                 <img src="https://travelforyouth.org/wp-content/uploads/2021/12/Quiz_icon.png" alt="TFY Youth Travel">
                 <h2><span>Find Your Perfect TFY Trip</span> Take our Trip Finder Quiz</h2>
             </div>
@@ -282,13 +282,20 @@ $nectar_options = get_nectar_theme_options();
                     </g>
                 </svg>            
             </div>
-            <h2><?php the_field('mission_h2'); ?></h2>
+            <h2 class="hum-title"><?php the_field('mission_h2'); ?></h2>
         </div>
         <div class="row pad-btm">
-            <div class="col-sx-12 col-md-6">
+            <div class="col-sx-12 col-md-6 last-xs first-md">
                 <img class="up" src="<?php the_field('mission_image'); ?>">
+                <div class="ceo ceo-img">
+                    <div class="quote">
+                        <p><?php the_field('ceo_quote'); ?>
+                            <span class="author"><?php the_field('ceo_author'); ?></span>
+                        </p>
+                    </div>    
+                </div>
             </div>
-            <div class="col-sx-12 col-md-6">
+            <div class="col-sx-12 col-md-6 first-xs last-md">
                 <div class="lrg">
                 <?php the_field('mission_text'); ?> 
                     <a href="<?php the_field('mission_button_url'); ?>" class="ro-button hide-cursor"><?php the_field('mission_button_text'); ?></a>
@@ -325,15 +332,15 @@ $nectar_options = get_nectar_theme_options();
             <?php while( have_rows('testimonials') ): the_row(); ?>
                 <div class="item">
                     <div class="row">
-                        <div class="col-sx-12 col-lg">
+                        <div class="col-sx-12 col-md-3 col-lg last-xs first-md">
                             <img src="<?php the_sub_field('img_1'); ?>">
                         </div>
-                        <div class="col-sx-12 col-lg f-width">
+                        <div class="col-sx-12 col-md-6 col-lg f-width">
                             <p class="textimonial"><?php the_sub_field('testimonial'); ?>
                                 <span class="author"><img class="circle" src="<?php the_sub_field('author_img'); ?>"><?php the_sub_field('author_name'); ?></span>
                             </p>
                         </div>
-                        <div class="col-sx-12 col-lg">
+                        <div class="col-sx-12 col-md-3 last-xs col-lg">
                             <img class="down" src="<?php the_sub_field('img_2'); ?>">
                         </div>
                     </div>

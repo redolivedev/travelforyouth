@@ -25,6 +25,7 @@
     font-size: 25px;
     font-weight: 300;
     line-height: 1.2;
+    padding-bottom: 60px;
     @include sm {
         font-size: 30px;
     }
@@ -35,14 +36,13 @@
 
 .btm {
     position: fixed;
-    bottom: 200px;
+    bottom: 70px;
     left:40px;
-    @include sm {
-        bottom: 100px;
-        @media screen and (min-height: 700px) {
-            bottom: 160px;
-        }
+
+    @media screen and (min-height: 700px) {
+        bottom: 130px;
     }
+
     @include lg {
         bottom: 60px;
         @media screen and (min-height: 700px) {
@@ -95,12 +95,11 @@
    h2 {
        color:$white;
    }
-   &.extra-btm{
+   &.extra-btm {
         padding-bottom: 450px;
         position: relative;
 
-        
-        @include xl {
+        @include sm {
             padding-bottom: 560px;
         }
         
@@ -111,13 +110,12 @@
 }
 .ro-button {
     border: 2px solid $yellow;
-    font-size:20px;
+    font-size:18px;
     color:$white;
-    border-radius: 30px;
-    padding:15px 12px;
-    @include sm {
-        padding:15px 30px;
-    }
+    border-radius: 50px;
+    padding:15px 30px;
+    display: inline-block;
+    @include transition(.3s);
 }
 .ro-button:hover {
     background:$yellow;
@@ -125,12 +123,14 @@
 }
 
 .indent {
+    
+    p {
+        padding-bottom: 60px;
+    }
     @include sm {
         padding-left:80px;
         padding-top: 30px;
-        p {
-            padding-bottom: 60px;
-        }
+    
     }
 }
 .vidb {
@@ -173,11 +173,13 @@
 
 
 .about-img {
-
-    top:0;
+    position: relative;
+    top:-40px;
+    z-index: -1;
     @include sm {
         position: absolute;
         right:0;
+        top:0;
         max-width: 410px;
     }
     @include lg {
@@ -187,15 +189,17 @@
 
 }
 .about-pad {
-    padding-left:40px;
+    padding-left:20px;
    padding-right:20px;
    position: relative;
+
    @include sm-down {
         h2 {
-            padding-top:40px;
+            padding-top:160px;
         }
     }
     @include md {
+        padding-left:40px;
         padding-top:80px;
         padding-bottom:100px;
         
@@ -304,6 +308,11 @@
         @include transition(.5s);
         opacity: 1;
         z-index: 1;
+    }
+}
+#mobilePlaces .owl-nav {
+    @include sm {
+        margin-top:40px;
     }
 }
 
@@ -419,7 +428,7 @@
         color:$black;
         position:absolute;
         font-family: $font;
-        font-size:18px;
+        font-size:15px;
         letter-spacing: 2px;
         font-weight: 600;
         line-height: 1;
@@ -429,6 +438,7 @@
         padding: 10px 20px;
         z-index: 999;
         text-align: center;
+        @include transition(.3s);
         @include lg {
             right:-40px;
             top: 40px;
@@ -450,7 +460,7 @@
                     height:100%;
                 }
                 img {
-                    filter: blur(3px) grayscale(100%);
+                    filter: blur(0) grayscale(100%);
                     
                 }
                 h3 {
@@ -464,6 +474,11 @@
                 .hover-text {
                     opacity: 1;
                     top:100px;
+                }
+                @include lg {
+                    .flag {
+                        right: -80px;
+                    }
                 }
             }
     }
@@ -500,15 +515,27 @@
     }
     
     h2 {
-        font-size: 40px;
+   
         letter-spacing: 0;
         line-height: 1;
         display: block;
-        margin: 20px 20px 20px 20px;
+       
         @include lg {
             font-size: 70px;
             line-height: 90px;
-            margin: 20px 20px 20px 80px;
+        }
+        &.hum-title {
+            margin: 60px 20px 40px 60px;
+            @include sm {
+                margin: 60px 20px 60px 80px;
+                b {
+                    display: block;
+                }
+            }
+            @include lg {
+                margin: 20px 20px 20px 80px;
+               
+            }
         }
     }
     .lrg{
@@ -516,7 +543,8 @@
         letter-spacing: 0.43px;
         line-height: 36px;
         font-weight: 300;
-        padding:40px;
+        padding:0px 40px 60px;
+        
     }
     .up {
         @include lg {
@@ -526,16 +554,23 @@
     }
     .ro-button {
         color:$black;
-        font-weight: 600;
+        font-weight: 400;
+        margin-top:20px;
+        background:$white;
+        &:hover {
+            background:$yellow;
+        }
     }
 }
 
 .ceo {
     background:#eee;
     position: relative;
+    @include lg-down {
+        display:none; 
+    }
     
     @include lg {
-        margin-top:30px;
         left:-25px;
     }
     &:before {
@@ -555,6 +590,7 @@
     .quote {
         padding:30px 30px 30px 100px;
         position: relative;
+       
         &:before {
             content: '';
             position: absolute;
@@ -564,6 +600,7 @@
             width:54px;
             background-repeat: no-repeat;
             background-position: center;
+            background-size: contain;
             background-image:url('https://travelforyouth.org/wp-content/uploads/2021/10/Quotes.png');
         }
         p {
@@ -580,15 +617,46 @@
             }
         }
     }
+    &.ceo-img {
+        display: none;
+        width:300px;
+        margin:auto;
+        position: relative;
+        margin-top:150px;
+        @include lg-down {
+            display: block !important;
+        }
+       &:before {
+           width:300px;
+           height: 300px;
+           left:0;
+           right:0;
+           top:-300px;
+       }
+       .quote { 
+           padding:60px 20px 30px;
+           p {line-height: 1.5;}
+           &:before { 
+            height: 30px;
+            width:40px;
+            top:20px;
+           }
+           .author { 
+               font-size: 14px;
+               margin-top:10px;
+           }
+       }
+    }
    
 }
 
 
 
 .testimonial {
-    
+    padding:0px 0 100px;
+   
     @include lg {
-        padding:0px 0 200px;
+        padding:0px 0 300px;
         .f-width {
             min-width:500px;
             position: relative;
@@ -597,11 +665,18 @@
             overflow: unset;
         }
     }
+    @media screen and (min-width: 1400px) {
+        padding:0px 0 200px;
+    }
     
     .heading-wrap {
         text-align: center;
         position: relative;
-        padding-bottom: 40px;
+        padding-bottom: 60px;
+        @include md-down {
+            padding-top:40px;
+            padding-bottom: 40px;
+        }
        
         margin:auto;
         h2 {
@@ -630,10 +705,10 @@
     .textimonial {
         padding-left:80px;
         padding-right:40px;
-        margin-top:60px;
         position: relative;
-        background:$white;
+  
         @include lg {
+            margin-top:60px;
             position: absolute;
         }
         &:before {
@@ -655,6 +730,15 @@
     @include lg {
         .down {
             padding-top:120px;
+        }
+    }
+    @include sm-down {
+        .owl-carousel .owl-item img {
+            width:80%;
+            &.down {
+                margin-top:60px;
+                float:right;
+            }
         }
     }
 
@@ -708,12 +792,18 @@
 }
 .mobile-locations {
     display:block;
+    z-index: 3;
 
     .owl-next i, 
     .owl-prev i {
         background:$black;
         color:$white;
         border:2px solid $white;
+        @include transition(.3s);
+        &:hover {
+            border:2px solid $yellow;
+            color:$yellow;
+        }
     }
 }
 
@@ -808,13 +898,15 @@
     position: relative;
 }
 .pad-btm {
-    padding-bottom:40px;
-    @include lg {
-        padding-bottom:150px;
-    }
+    padding-bottom:150px;
+    position: relative;
+    z-index: 10;
+   
 }
 .pad-l {
-    padding-left: 40px;
+    @include md {
+        padding-left: 40px;
+    }
 }
 
 .dome {
@@ -825,7 +917,6 @@
     right:0;
     margin:auto;
     height: 300px;
-    padding: 70px 20px 0;
     display: block;
     overflow: hidden;
     z-index: 10;
@@ -836,35 +927,55 @@
 
     h2 {
         font-family: $font;
-        font-size:40px;
+        font-size:30px;
         font-weight: 500;
         line-height: 1.5;
+        @include sm {
+            font-size:40px;
+        }
         span {
             font-family: $font;
             display:block;
-            font-size:24px;
+            font-size:18px;
             color:#8290A0;
             font-weight: 300;
+            @include sm {
+                font-size:24px;
+            }
+        }
+    }
+    .dome-text {
+        position: absolute;
+        bottom:10px;
+        z-index: 4;
+        left:0;
+        right:0;
+        img {
+            @include transition(.3s);
+            position: relative;
+            top:0;
         }
     }
     
     &:before {
         content: "";
         position:absolute;
-        width: 700px;
-        height: 350px;
+        width: 100%;
+        height: 100%;
         border-radius: 350px 350px 0 0;
         border: 1px solid #000;
         bottom: -100px;
-        left:-110px;
+        left:0;
         right:0;
         margin:auto;
         background:#000;
         @include transition(.3s);
 
-        @include xs {
-            left:0;
+        @include sm {
+            width: 700px;
+            height: 350px;
         }
+
     }
     &:hover {
         h2 span {
@@ -872,6 +983,9 @@
         }
         &:before {
             background: #8290A0;
+        }
+        .dome-text img {
+            top:-20px;
         }
     }
 }
