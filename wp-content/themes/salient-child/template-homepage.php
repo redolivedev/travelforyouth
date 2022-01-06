@@ -370,37 +370,49 @@ $nectar_options = get_nectar_theme_options();
             <?php the_field('instagram_title'); ?>
         </h2>
    </div>
+
+
+   <?php echo do_shortcode('[instagram-feed]');?>
+
     <div class="wrap tiles">
         <div class="row middle-xs">
-            <div class="col-xs-3">
-                <a href="https://www.instagram.com/p/CR7kO0Cpg_i/" target="_blank" class="box">
-                   <img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_4.jpg">
-                </a>
+            <div class="col-xs-3 box">
+                <div class="insta-0">
+                    <a href="https://www.instagram.com/p/CR7kO0Cpg_i/" target="_blank" ><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_4.jpg"></a>
+                </div>
             </div>
             <div class="col-xs-6">
                 <div class="box">
                     <div class="row bottom-xs btm-15">
                         <div class="col-xs-7">
-                            <a href="https://www.instagram.com/p/CQzNixOpC91/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_6.jpg"></a>
+                            <div class="insta-1">
+                                <a href="https://www.instagram.com/p/CQzNixOpC91/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_6.jpg"></a>
+                            </div>
                         </div>
                         <div class="col-xs-5">
-                            <a href="https://www.instagram.com/p/CQhZdWZptcF/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_1.jpg"></a>
+                            <div class="insta-2">
+                                <a href="https://www.instagram.com/p/CQhZdWZptcF/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_1.jpg"></a>
+                            </div>
                         </div>
                     </div>
                     <div class="row top-xs">
                         <div class="col-xs-5">
-                            <a href="https://www.instagram.com/p/CRP7y-gJ9NV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_3.jpg"></a>
+                            <div class="insta-3">
+                                <a href="https://www.instagram.com/p/CRP7y-gJ9NV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_3.jpg"></a>
+                            </div>
                         </div>
                         <div class="col-xs-7">
-                            <a href="https://www.instagram.com/p/CQU27SkJ9vV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_5.jpg"></a>
+                            <div class="insta-4">
+                                <a href="https://www.instagram.com/p/CQU27SkJ9vV/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_5.jpg"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3">
-                <a href="https://www.instagram.com/p/CQZIVlZJeTf/" target="_blank" class="box">
-                    <img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_2.jpg">
-                </a>
+            <div class="col-xs-3 box">
+                <div class="insta-5">
+                    <a href="https://www.instagram.com/p/CQZIVlZJeTf/" target="_blank"><img src="https://travelforyouth.org/wp-content/uploads/2021/10/Insta_2.jpg"></a>
+                </div>
             </div>
         </div>
     </div>

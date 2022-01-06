@@ -308,12 +308,18 @@ jQuery(document).ready(function($) {
 
 
 
+		$('.sbi_photo').each(function(i, e) {
+			// $(this).val().push(mainArray);
+			var $img = $(this).attr('data-full-res');
+			var $href = $(this).attr('href');
+			$('.insta-'+i).replaceWith( "<a target='_blank' href='" + $href + "'><img src='" + $img + "'></a>" );
 
-	var mainArray = [];
-	$('.sbi_photo[data-full-res]').each(function(){
-		$(this).val().push(mainArray);
-	});
-	console.log(mainArray);
+			// $mainArray['row'+i] = $url;
+			// console.log($url);
+		});
+		// console.log($mainArray);
+	
+
 
 	
 }); 
